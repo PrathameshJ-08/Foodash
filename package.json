@@ -38,6 +38,5 @@
     "react-router-dom": "^6.21.2",
     "redux-persist": "^6.0.0",
     "tailwind-scrollbar": "^3.0.5"
-  },
-  "main": "proxy-server.js"
+  }
 }
