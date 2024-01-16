@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
+
 import MenuItemList from "./MenuItemList";
+
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 

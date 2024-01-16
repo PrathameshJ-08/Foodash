@@ -13,7 +13,7 @@ const Shimmer = () => {
 
       {/* Content Shimmer */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8 p-5">
-        {[...Array(4)].map((_, index) => (
+        {[...Array(3)].map((_, index) => (
           <div
             key={index}
             className="bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 shimmer h-48 rounded-2xl"
@@ -28,7 +28,7 @@ const Shimmer = () => {
             key={index}
             className={`bg-gradient-to-r from-gray-300 via-gray-200 to-gray-300 shimmer h-10 w-${
               index === 0 ? "24" : "40"
-            } rounded-md`}
+            } rounded-2xl`}
           ></div>
         ))}
       </div>

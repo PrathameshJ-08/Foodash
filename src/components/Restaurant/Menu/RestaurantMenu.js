@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
-import { RESTAURANT_IMG_URL } from "../../../utils/constants";
-import ResMenuShimmer from "../../../assets/Shimmer/ResMenuShimmer";
+import { useSelector } from "react-redux";
 
 import useMenuList from "../../../utils/hooks/useMenuList";
 import useScrollToTopOnMount from "../../../utils/hooks/useScrollToTop";
@@ -10,11 +8,11 @@ import NestedCategory from "./NestedCategory";
 import Cart from "../Cart";
 import Offers from "./Offers";
 
+import { RESTAURANT_IMG_URL } from "../../../utils/constants";
+import ResMenuShimmer from "../../../assets/Shimmer/ResMenuShimmer";
 import { PiCookingPotBold } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
 import { FaArrowUp } from "react-icons/fa";
-import { useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
 
 const MenuList = () => {
   useScrollToTopOnMount();

@@ -1,31 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { GETALL_RESTAURANTS_API } from "../constants";
+import useFetchRestaurants from "./useFetchRestaurants";
 
 const useLocation = () => {
   const [query, setQuery] = useState("");
   const [res, setRes] = useState([]);
-  const [citiesData, setCitiesData] = useState([]);
   const [link, setLink] = useState("");
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    try {
-      const response = await fetch(GETALL_RESTAURANTS_API);
-      const tojson = await response.json();
-
-      // Assuming the cities data is available in the specified path
-      const cities = tojson.data.cards[10]?.card.card.cities;
-      console.log(cities);
-      if (cities) {
-        setCitiesData(cities.map((city) => city.text));
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+  const { citiesData } = useFetchRestaurants();
 
   useEffect(() => {
     if (!query) return;

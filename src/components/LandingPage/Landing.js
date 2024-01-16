@@ -7,8 +7,6 @@ import Landing3 from "./Landing3";
 import Login from "../Auth/Login";
 import SignUp from "../Auth/SignUp";
 import "./slide.css";
-import { useUserContext } from "../../utils/userContext";
-import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
   const { renderLocationSearchBar } = useLocation();

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+
 import { auth } from "./firebase";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+
 import CloseIcon from "@mui/icons-material/Close";
-import Login from "./Login";
+
 import { useUserContext } from "../../utils/userContext";
+import Login from "./Login";
 
 const SignUp = ({
   setShowForm,
@@ -27,13 +30,10 @@ const SignUp = ({
       );
       const user = userCredential.user;
 
-      // Update the user's display name
       await updateProfile(user, { displayName: name });
 
-      // Log the user data after signup
-      console.log("User data after signup:", auth.currentUser);
+      // console.log("User data after signup:", auth.currentUser);
 
-      // Set user information to context
       updateUser({ name });
       setName("");
       setEmail("");

@@ -13,12 +13,12 @@ const cartSlice = createSlice({
       );
 
       if (existingItemIndex !== -1) {
-        // If the item already exists, increase its quantity
+        //  increase  quantity
         state.items[existingItemIndex].quantity++;
         state.items[existingItemIndex].totalPrice =
           state.items[existingItemIndex].quantity * newItem.card.info.price;
       } else {
-        // If the item doesn't exist, add a new entry
+        // doesn't exist, new entry
         state.items.push({
           ...newItem,
           quantity: 1,
@@ -51,7 +51,7 @@ const cartSlice = createSlice({
           removedItem.totalPrice =
             removedItem.quantity * removedItem.card.info.price;
         } else {
-          // If quantity is 1, remove the item from the cart
+          // quantity 1, remove from cart
           state.items = state.items.filter(
             (item) => item.card.info.id !== action.payload
           );

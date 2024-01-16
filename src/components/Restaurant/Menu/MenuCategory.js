@@ -1,4 +1,3 @@
-// RestaurantCategory.js
 import React, { useState } from "react";
 import Accordion from "./Accordion";
 

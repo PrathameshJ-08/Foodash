@@ -1,10 +1,13 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { auth } from "./firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
+
+import { useUserContext } from "../../utils/userContext";
+
 import CloseIcon from "@mui/icons-material/Close";
 import SignUp from "./SignUp";
-import { useUserContext } from "../../utils/userContext";
-import { useNavigate } from "react-router-dom";
 
 const Login = ({
   setShowForm,
@@ -32,7 +35,6 @@ const Login = ({
 
       console.log("User data after login:", user);
 
-      // Set user information to context
       updateUser({ name: user.displayName });
 
       setLoginSuccess(true);

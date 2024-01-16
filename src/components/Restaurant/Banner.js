@@ -8,7 +8,7 @@ const Banner = () => {
 
   const scroll = (direction) => {
     const container = containerRef.current;
-    const scrollAmount = container.clientWidth; // Scroll one container width at a time
+    const scrollAmount = container.clientWidth;
     if (container) {
       if (direction === "left") {
         container.scrollLeft -= scrollAmount;
