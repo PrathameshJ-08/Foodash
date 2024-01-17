@@ -2,7 +2,7 @@
   "name": "swiggy",
   "version": "1.0.0",
   "description": "",
-  "proxy": "http://localhost:3001",
+  "proxy": "https://foodash-api.vercel.app",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",

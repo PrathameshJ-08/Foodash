@@ -19,7 +19,7 @@ const useFetchRestaurants = () => {
     try {
       setIsLoading(true);
       // const proxyUrl = "http://localhost:3001/swiggy-api";
-      const proxyUrl = "https://foodash.vercel.app/api/swiggy-api";
+      const proxyUrl = "https://foodash-api.vercel.app/swiggy-api";
       const data = await fetch(`${proxyUrl}?lat=${lat}&lng=${long}`);
 
       if (!data.ok) {

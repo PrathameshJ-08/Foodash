@@ -11,7 +11,7 @@ const useMenuList = () => {
     const fetchData = async (lat, long) => {
       try {
         // const proxyUrl = "http://localhost:3001/swiggy-menu";
-        const proxyUrl = "https://foodash.vercel.app/api/swiggy-menu";
+        const proxyUrl = "https://foodash-api.vercel.app/swiggy-menu";
 
         const data = await fetch(
           `${proxyUrl}?page-type=REGULAR_MENU&complete-menu=true&lat=${lat}&lng=${long}&restaurantId=${resId}`
