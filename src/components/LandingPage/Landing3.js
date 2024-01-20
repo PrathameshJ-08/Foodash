@@ -11,7 +11,7 @@ const Landing3 = () => {
     <>
       <div className="flex mt-[-9rem]  bg-slate-50  w-full">
         <div className="xl:w-1/2 sm:w-1/3 w-2/3 flex flex-col justify-center xl:pl-44">
-          <span className="xl:text-4xl text- font-bold max-w-96  sm:ml-6  p-5 sm:p-0  sm:mt-0">
+          <span className="xl:text-4xl text-xl  font-bold max-w-96  sm:ml-6  p-5 sm:p-0  sm:mt-0">
             Restaurants in your pocket
             <p className="xl:text-base text-xs w-36 sm:w-auto font-light  sm:mt-3">
               Order from your favorite restaurants & track on the go, with the
@@ -48,13 +48,13 @@ const Landing3 = () => {
         </div>
         <img
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_368,h_438/pixel_wbdy4n"
-          className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-40 ml-[-40] md:ml-0 sm:-ml-8 "
+          className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-24 ml-[-40] md:ml-0 sm:-ml-8 "
           alt="Top Image"
         />
 
         <img
           src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_368,h_438/iPhone_wgconp_j0d1fn"
-          className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-40 sm:-ml-8 md:ml-0"
+          className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-24 sm:-ml-8 md:ml-0"
           alt="Bottom Image"
         />
       </div>

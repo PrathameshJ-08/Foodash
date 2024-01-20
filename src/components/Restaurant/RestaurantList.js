@@ -107,8 +107,6 @@ const RestaurantList = () => {
 
   if (listOfRes.length === 0) return <Shimmer />;
 
-  console.log(listOfRes);
-
   return (
     <main className="mx-4 md:mx-10 lg:mx-20 xl:mx-40 text-slate-700 pb-5 mt-28">
       <h1 className="text-2xl font-bold sm:text-3xl">
@@ -118,9 +116,12 @@ const RestaurantList = () => {
       <div className="lg:block">
         <h1 className="text-2xl font-bold mt-8">Top tastes around</h1>
         <div className="border-b-2 flex items-center max-w-full mx-auto mt-4 overflow-x-auto">
-          <div className="flex flex-col md:flex-row gap-2 md:gap-8 rounded-xl h-[20.1rem] overflow-x-auto max-w-screen-xl menu-scroll  px-1 ">
+          <div className="flex flex-col sm:flex-row gap-2 md:gap-8 rounded-xl h-[20.1rem] overflow-x-auto max-w-screen-xl menu-scroll  px-1 ">
             {listOfRes.map((rlist) => (
-              <div key={rlist.info.id} className="flex-shrink-0 md:mb-0  ">
+              <div
+                key={rlist.info.id}
+                className="flex-shrink-0 md:mb-0 sm:w-44 md:w-[246px] xl:w-auto"
+              >
                 <Link to={`restaurants/${rlist.info.id}`} className="block">
                   <RestaurantCard resObj={rlist} />
                 </Link>
@@ -131,9 +132,7 @@ const RestaurantList = () => {
       </div>
 
       <h1 className="text-2xl font-bold mt-12 -mb-4">Local bites to you</h1>
-      <h1 className="text-2xl font-bold mt-12 -mb-4">
-        {/* {location.loaded ? JSON.stringify(location) : "ea"} */}
-      </h1>
+      <h1 className="text-2xl font-bold mt-12 -mb-4"></h1>
 
       <FilterRestaurant
         filterOptions={filterOptions}

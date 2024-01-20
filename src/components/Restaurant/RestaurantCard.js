@@ -30,7 +30,7 @@ const RestaurantCard = (props) => {
             src={RESTAURANT_IMG_URL + cloudinaryImageId}
             alt={name}
           />
-          <label className="absolute bg-gradient-to-t from-black text-sm xl:text-xl sm:text-2xl md:text-xl font-bold text-white sm:w-full w-28 pt-6 pb-2 px-2 sm:mt-[165px] xl:mt-[126px] bottom-0 sm:text-center rounded-xl cursor-pointer">
+          <label className="absolute bg-gradient-to-t from-black text-sm sm:text-xl md:text-xl font-bold text-white sm:w-full w-21 pt-6 pb-2 px-2 sm:mt-[165px] xl:mt-[126px] bottom-0 sm:text-center rounded-xl cursor-pointer">
             {aggregatedDiscountInfoV3.header}{" "}
             {aggregatedDiscountInfoV3.subHeader}
           </label>
@@ -41,7 +41,7 @@ const RestaurantCard = (props) => {
         </div>
       )}
 
-      <div className="sm:mx-2 col-span-3 p-2 px-2 sm:px-0">
+      <div className="sm:mx-2 col-span-3 p-2 sm:px-0">
         <div className="overflow-hidden">
           <h1 className="font-bold text-lg truncate">{name}</h1>
         </div>
@@ -68,10 +68,6 @@ const RestaurantCard = (props) => {
     </div>
   );
 };
-
-//HIGHER ORDER COMPONENT
-// input - Restaurant card
-// output - Res Card promoted
 
 export const withPromoted = (RestaurantCard) => {
   return (props) => {

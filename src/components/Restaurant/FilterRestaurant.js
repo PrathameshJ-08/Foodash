@@ -50,9 +50,9 @@ const FilterRestaurant = ({
           Search
         </button>
       </div>
-      <div className="md:space-x-6  md:flex ">
+      <div className="lg:space-x-6   md:flex ">
         <button
-          className={`md:py-2 md:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
+          className={`md:py-2 lg:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
             filterOptions.topRated
               ? "bg-teal-500 text-white"
               : "bg-white text-teal-500"
@@ -62,7 +62,7 @@ const FilterRestaurant = ({
           Top Rated
         </button>
         <button
-          className={`md:py-2 md:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
+          className={`md:py-2 lg:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
             filterOptions.lowerToHigherPrice
               ? "bg-teal-500 text-white"
               : "bg-white text-teal-500"
@@ -72,7 +72,7 @@ const FilterRestaurant = ({
           Low to High ₹
         </button>
         <button
-          className={`md:py-2 md:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
+          className={`md:py-2 lg:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
             filterOptions.higherToLowerPrice
               ? "bg-teal-500 text-white"
               : "bg-white text-teal-500"
@@ -82,7 +82,7 @@ const FilterRestaurant = ({
           High to Low ₹
         </button>
         <button
-          className={`md:py-2 md:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
+          className={`md:py-2 lg:px-4 py-1 px-2 rounded-full border-2 border-solid mb-2 md:mb-0 ${
             filterOptions.lowestDeliveryTime
               ? "bg-teal-500 text-white"
               : "bg-white text-teal-500"

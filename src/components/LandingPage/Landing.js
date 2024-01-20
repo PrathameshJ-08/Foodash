@@ -7,6 +7,8 @@ import Landing3 from "./Landing3";
 import Login from "../Auth/Login";
 import SignUp from "../Auth/SignUp";
 import "./slide.css";
+import { useUserContext } from "../../utils/userContext";
+import { useNavigate } from "react-router-dom";
 
 const Landing = () => {
   const { renderLocationSearchBar } = useLocation();
@@ -70,10 +72,10 @@ const Landing = () => {
           }`}
         >
           <div className="xl:w-1/2">
-            <section className="flex-1 flex flex-col sm:p-16 px-14 py-16">
+            <section className="flex-1 flex flex-col sm:p-16 px-7 py-16">
               <div className="flex items-center">
-                <Logo width="w-14 sm:w-24" ml="ml-0" />
-                <h1 className="text-3xl sm:text-4xl font-extrabold text-teal-500">
+                <Logo width="w-8 sm:w-24" ml="ml-0" />
+                <h1 className="text-xl sm:text-4xl font-extrabold text-teal-500">
                   FOODASH
                 </h1>
 
@@ -140,7 +142,7 @@ const Landing = () => {
                 </div>
               )}
             </section>
-            <div className="text-slate-400 bg-cyan-950 w-full mt-[-6rem] pl-16">
+            <div className="text-slate-400 bg-cyan-950 w-full mt-[-6rem] pl-8 sm:pl-16">
               <h2 className="pt-16 ">POPULAR CITIES IN INDIA</h2>
               <span>
                 Ahmedabad Bangalore Chennai Delhi Gurgaon Hyderabad Kolkata
