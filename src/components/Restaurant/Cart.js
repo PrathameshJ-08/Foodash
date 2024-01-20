@@ -5,6 +5,7 @@ import {
   decreaseItemQuantity,
   clearCart,
 } from "../../utils/cartSlice";
+import { Link } from "react-router-dom";
 
 const Cart = ({ resInfo }) => {
   const [tip, setTip] = useState("0");
@@ -51,9 +52,11 @@ const Cart = ({ resInfo }) => {
 
   return (
     <div className="w-[366px] mx-auto  rounded-md shadow-md p-4  bg-slate-100 z-50">
-      <div className="flex items-center justify-between mb-4">
-        <button className="text-green-500 font-semibold">Your Cart</button>
-      </div>
+      <Link to="/cart">
+        <div className="flex items-center justify-between mb-4">
+          <button className="text-green-500 font-semibold">Your Cart</button>
+        </div>
+      </Link>
 
       <div className="overflow-y-auto max-h-[300px] mb-4">
         {cartItems.length === 0 ? (

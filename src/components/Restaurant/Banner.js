@@ -48,7 +48,7 @@ const Banner = () => {
               <img
                 src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_168,h_190/${bannerItem.imageId}`}
                 alt={bannerItem.action.text}
-                className="mix-blend-multiply h-full object-cover rounded-full w-24 xl:w-40 cursor-pointer"
+                className="mix-blend-multiply h-full object-cover rounded-full w-24 md:w-32 xl:w-40 cursor-pointer"
                 onClick={() =>
                   console.log(`Clicked on ${bannerItem.action.text}`)
                 }
