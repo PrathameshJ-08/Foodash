@@ -164,10 +164,6 @@ const Cart = ({ resInfo }) => {
           <span>GST and Restaurant Charges</span>
           <span>{cartItems.length === 0 ? " ₹0" : `₹20.00`}</span>
         </div>
-
-        <button className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition">
-          Back to Menu
-        </button>
       </div>
     </div>
   );
