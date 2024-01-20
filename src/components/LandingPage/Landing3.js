@@ -46,17 +46,19 @@ const Landing3 = () => {
             </button>
           </div>
         </div>
-        <img
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_368,h_438/pixel_wbdy4n"
-          className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-24 ml-[-40] md:ml-0 sm:-ml-8 "
-          alt="Top Image"
-        />
+        <div className="md:flex ">
+          <img
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_368,h_438/pixel_wbdy4n"
+            className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-24 ml-[-40] md:ml-0 sm:-ml-8 "
+            alt="Top Image"
+          />
 
-        <img
-          src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_368,h_438/iPhone_wgconp_j0d1fn"
-          className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-24 sm:-ml-8 md:ml-0"
-          alt="Bottom Image"
-        />
+          <img
+            src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_368,h_438/iPhone_wgconp_j0d1fn"
+            className="sm:w-64 sm:h-72 xl:w-80 xl:h-96 h-24 sm:-ml-8 md:ml-0 "
+            alt="Bottom Image"
+          />
+        </div>
       </div>
     </>
   );
