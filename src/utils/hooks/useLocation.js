@@ -50,7 +50,7 @@ const useLocation = () => {
           />
 
           <button
-            className="bg-yellow-500 border-y-2 border-r-2 border-l-none border-cyan-950 text-white px-8 sm:py-5 py-5 text-xs sm:text-base rounded-r w-40 "
+            className="bg-yellow-500 border-y-2 border-r-2 border-l-none border-cyan-950 text-white px-8 sm:py-5 py-4 text-xs sm:text-base rounded-r w-40 "
             onClick={handleSearch}
           >
             {query ? "Find Food" : "Find Me  "}

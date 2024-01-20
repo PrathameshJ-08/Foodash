@@ -2,7 +2,7 @@ import { LANDINGIMG } from "../../utils/constants";
 
 const Landing2 = () => {
   return (
-    <div className="xl:p-48 sm:py-48 py-60 xl:-mt-52 sm:-mt-40 -mt-60 bg-cyan-950 flex justify-between gap-11 px-5">
+    <div className="xl:p-48 sm:py-48 pb-44 pt-64 xl:-mt-52 sm:-mt-40 -mt-60 bg-cyan-950 flex justify-between gap-11 px-5 text-center">
       <div className="flex flex-col items-center w-64">
         <img
           src={`${LANDINGIMG}_-_No_min_order_x0bxuf.png`}
