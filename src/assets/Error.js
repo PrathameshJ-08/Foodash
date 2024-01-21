@@ -18,7 +18,7 @@ const Error = () => {
             <h3 className="text-6xl text-center mb-2">Look like you're lost</h3>
             <p>The page you are looking for is not available!</p>
             <Link
-              to="/body"
+              to="/"
               className=" inline-block bg-green-500 text-white px-8 py-4 mt-8 rounded-2xl"
             >
               Go to Home

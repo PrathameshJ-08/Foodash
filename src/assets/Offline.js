@@ -5,7 +5,6 @@ function Offline() {
     <div className="flex flex-col items-center justify-center bg-slate-200 h-screen">
       <h1>Hit Spacebar to play!!</h1>
       <p>
-        {" "}
         Online Status <WifiOffIcon className="text-red-400 animate-ping" />
       </p>
       <div className="w-full bg-gradient-to-t from-sky-200 via-sky-300  border-b-[24px] border-lime-400 h-[210px] ">
