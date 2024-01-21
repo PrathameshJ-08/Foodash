@@ -112,8 +112,6 @@ const MenuList = () => {
     return cartItems.length > 0;
   };
 
-  console.log(resInfo);
-
   return (
     <>
       <div className="flex flex-col">

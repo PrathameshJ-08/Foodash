@@ -33,8 +33,6 @@ const Login = ({
       );
       const user = userCredential.user;
 
-      console.log("User data after login:", user);
-
       updateUser({ name: user.displayName });
 
       setLoginSuccess(true);

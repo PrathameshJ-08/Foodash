@@ -6,10 +6,12 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import { OrderImg } from "../../assets/images";
 import { Link } from "react-router-dom";
+import useFetchRestaurants from "../../utils/hooks/useFetchRestaurants";
 
 const CheckoutPage = () => {
   const [order, setOrder] = useState(false);
   const { user } = useUserContext();
+  const { location } = useFetchRestaurants();
   const handleOrder = () => {
     setOrder(!order);
   };
@@ -34,7 +36,11 @@ const CheckoutPage = () => {
                 <div className="text-teal-500 p-5">
                   <LocationOnIcon />
                 </div>
-                <span className="px-5">Delivery Address</span>
+                <span className="px-5">
+                  {location?.address?.suburb}, {location?.address?.city},{" "}
+                  {location?.address?.state_district}-
+                  {location?.address?.postcode}, {location?.address?.state}
+                </span>
               </div>
               <div className="bg-zinc-50 rounded-sm mx-20 mt-5 shadow-lg flex overflow-hidden items-center">
                 <div className="text-teal-500 p-5">
