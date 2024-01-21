@@ -104,7 +104,7 @@ const FilterRestaurant = ({
             {selectedCuisine ? selectedCuisine + " X" : "Cuisines"}
           </button>
           {isActive && (
-            <div className="menu z-20 origin-top-right absolute mt-2 w-36 max-h-44  rounded-2xl shadow-lg overflow-y-scroll bg-white ring-1 ring-black ring-opacity-5 md:-mr-40 md:-mt-12 left-5 md:left-auto md:right-0 border-4 border-teal-500">
+            <div className="menu z-20 origin-top-right absolute mt-2 w-36 max-h-44  rounded-2xl shadow-lg overflow-y-scroll bg-white ring-1 ring-black ring-opacity-5    border-2 border-teal-500 md:-ml-16 bg-opacity-90">
               <div
                 className="py-1"
                 role="menu"

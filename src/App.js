@@ -19,7 +19,7 @@ import "./index.css";
 import ResMenuShimmer from "./assets/Shimmer/ResMenuShimmer";
 import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
-import Cart from "./components/Restaurant/Cart";
+import CartLayout from "./components/Restaurant/CartLayout";
 import EmptyCart from "./assets/EmptyCart";
 import Login from "./components/Auth/Login";
 import { UserProvider } from "./utils/userContext";
@@ -76,7 +76,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: <CartLayout />,
       },
       {
         path: "/emptycart",

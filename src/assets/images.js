@@ -39,3 +39,13 @@ export function LoadingImg({ width = "w-[30rem]", height = "h-[25rem]" }) {
     </div>
   );
 }
+
+const order = new URL("../assets/OrderPlaced.gif", import.meta.url);
+
+export function OrderImg({ width = "w-[32rem]" }) {
+  return (
+    <div className="flex items-center justify-center h-auto  ">
+      <img src={order} className={`${width} }`} alt="OrderImg" loop={false} />
+    </div>
+  );
+}

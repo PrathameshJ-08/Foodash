@@ -30,13 +30,13 @@ const Footer = () => {
   };
 
   return (
-    <>
-      <div className="p-8 bg-neutral-200 text-center mt-12 ">
+    <footer className="w-full bottom-0">
+      <div className="p-8 bg-neutral-200 text-center ">
         <span className="font-extrabold text-teal-500">
           FOODASH 💚 A SWIGGY CLONE
         </span>
       </div>
-      <footer className="bg-gray-950 text-slate-300 py-8 ">
+      <div className="bg-gray-950 text-slate-300 py-8 ">
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 px-4 sm:px-44 pt-4 pb-20">
           <div>
             <h3 className="text-xl font-bold mb-2">FOODASH</h3>
@@ -92,8 +92,8 @@ const Footer = () => {
           </div>
         </div>
         {showAllCities && <Cities showAllCities={showAllCities} />}
-      </footer>
-    </>
+      </div>
+    </footer>
   );
 };
 

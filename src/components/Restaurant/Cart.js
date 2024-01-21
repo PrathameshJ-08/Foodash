@@ -51,7 +51,7 @@ const Cart = ({ resInfo }) => {
   console.log(resInfo);
 
   return (
-    <div className="w-[366px] mx-auto  rounded-md shadow-md p-4  bg-slate-100 z-50">
+    <div className="w-[366px] mx-auto  rounded-md shadow-md p-4  bg-slate-100 z-50 ">
       <Link to="/cart">
         <div className="flex items-center justify-between mb-4">
           <button className="text-green-500 font-semibold">Your Cart</button>

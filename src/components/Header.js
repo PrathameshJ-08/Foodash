@@ -16,17 +16,15 @@ const Header = () => {
 
   useEffect(() => {
     if (user.name) {
-      setIsLoading(true); // Show loading line
+      setIsLoading(true);
       setShowNotification(true);
-
-      // Decrease the loading line width every 100 milliseconds
       const intervalId = setInterval(() => {
         setLoadingWidth((prevWidth) => {
           const newWidth = Math.max(parseFloat(prevWidth) - 1, 0) + "%";
           if (newWidth === "0%") {
-            setIsLoading(false); // Hide loading line
+            setIsLoading(false);
             setShowNotification(false);
-            clearInterval(intervalId); // Stop the interval
+            clearInterval(intervalId);
           }
           return newWidth;
         });
@@ -35,7 +33,6 @@ const Header = () => {
     }
   }, [user.name]);
 
-  console.log("User in Header:", user);
   const onlineStatus = useOnlineStatus();
   const navigate = useNavigate();
 

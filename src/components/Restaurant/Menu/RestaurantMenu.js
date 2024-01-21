@@ -175,7 +175,7 @@ const MenuList = () => {
             </div>
           </>
         )}
-        <div className="mt-8 ">
+        <div className="mt-8 xl:mt-8 sm:mt-14 ">
           <div className="relative -mt-[55px] mb-5   text-center">
             <input
               type="text"
