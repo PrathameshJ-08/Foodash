@@ -19,11 +19,11 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative border-b-2 h-64">
-      <div className="px-5 -mt-8">
-        <div className=" flex justify-end text-3xl text-teal-400">
+    <div className="relative border-b-2 sm:h-64 h-44">
+      <div className="sm:px-5 sm:-mt-8 -mt-6">
+        <div className=" flex justify-end sm:text-3xl text-xl text-teal-400">
           <button
-            className="absolute mr-12  rounded-full bg-gray-200 hover:bg-gray-300"
+            className="absolute sm:mr-12 mr-8  rounded-full  active:bg-teal-400 active:text-white"
             onClick={() => scroll("left")}
           >
             <span>
@@ -31,7 +31,7 @@ const Banner = () => {
             </span>
           </button>
           <button
-            className="absolute  rounded-full bg-gray-200 hover:bg-gray-300"
+            className="absolute  rounded-full  active:bg-teal-400 active:text-white"
             onClick={() => scroll("right")}
           >
             <span>

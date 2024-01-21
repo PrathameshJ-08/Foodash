@@ -113,7 +113,7 @@ const RestaurantList = () => {
         Any cravings on standby?
       </h1>
       <Banner />
-      <div className="lg:block">
+      <div className="lg:block shadow-lg md:shadow-none rounded-2xl">
         <h1 className="text-2xl font-bold mt-8">Top tastes around</h1>
         <div className="border-b-2 flex items-center max-w-full mx-auto mt-4 overflow-x-auto">
           <div className="flex flex-col sm:flex-row gap-2 md:gap-8 rounded-xl h-[20.1rem] overflow-x-auto max-w-screen-xl menu-scroll  px-1 ">
