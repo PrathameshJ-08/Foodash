@@ -22,31 +22,29 @@ const CheckoutPage = () => {
         <OrderPage />
       ) : (
         <>
-          <div className="flex flex-col-reverse lg:flex-row bg-teal-100">
-            <div className="lg:w-8/12 pt-8 text-xl">
-              <div className="bg-zinc-50 rounded-sm mx-20 mt-5 shadow-lg flex overflow-hidden items-center">
+          <div className="flex flex-col-reverse lg:flex-row bg-teal-100 ">
+            <div className="lg:w-8/12 pt-8 text-md sm:text-xl">
+              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5  mt-5 shadow-lg flex overflow-hidden items-center">
                 <div className="text-teal-500 p-5">
                   <AccountCircleIcon />
                 </div>
-                <span className="px-5">
-                  {user.name ? `${user.name}!` : "Guest"}
-                </span>
+                <span>{user.name ? `${user.name}!` : "Guest"}</span>
               </div>
-              <div className="bg-zinc-50 rounded-sm mx-20 mt-5 shadow-lg flex overflow-hidden items-center">
+              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5 mt-5 shadow-lg flex overflow-hidden items-center">
                 <div className="text-teal-500 p-5">
                   <LocationOnIcon />
                 </div>
-                <span className="px-5">
+                <span>
                   {location?.address?.suburb}, {location?.address?.city},{" "}
                   {location?.address?.state_district}-
                   {location?.address?.postcode}, {location?.address?.state}
                 </span>
               </div>
-              <div className="bg-zinc-50 rounded-sm mx-20 mt-5 shadow-lg flex overflow-hidden items-center">
+              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5 mt-5 shadow-lg flex overflow-hidden items-center">
                 <div className="text-teal-500 p-5">
                   <AccountBalanceWalletIcon />
                 </div>
-                <span className="px-5">Payment</span>
+                <span>Payment</span>
               </div>
             </div>
             <div className="lg:w-4/12 pt-12">

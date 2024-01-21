@@ -50,7 +50,7 @@ const Header = () => {
   return (
     <>
       {showNotification && (
-        <div className="md:px-4 fixed top-16 right-4 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 text-white  py-2 rounded-md shadow-md z-50 animate-pulse">
+        <div className="px-4 fixed top-16 right-4 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 text-white  py-2 rounded-md shadow-md z-50 animate-pulse">
           <span className="font-bold">Hello {user.name}!</span>
           {isLoading && (
             <div
@@ -107,7 +107,7 @@ const Header = () => {
                 </Link>
               )}
             </li>
-            <li className="px-2">
+            <li>
               <button
                 className="bg-emerald-300 hover:bg-teal-500 active:bg-teal-700 focus:outline-none focus:ring focus:ring-emerald-300 px-3 rounded-2xl"
                 onClick={handleLogout}

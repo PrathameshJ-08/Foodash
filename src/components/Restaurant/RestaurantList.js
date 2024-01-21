@@ -108,7 +108,7 @@ const RestaurantList = () => {
   if (listOfRes.length === 0) return <Shimmer />;
 
   return (
-    <main className="mx-4 md:mx-10 lg:mx-20 xl:mx-40 text-slate-700 pb-5 mt-28">
+    <main className="mx-4 md:mx-10 lg:mx-20 xl:mx-40 text-slate-700 pb-5 md:mt-28 -mt-5">
       <h1 className="text-2xl font-bold sm:text-3xl">
         Any cravings on standby?
       </h1>
