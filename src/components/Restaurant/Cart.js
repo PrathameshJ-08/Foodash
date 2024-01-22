@@ -56,7 +56,7 @@ const Cart = ({ resInfo }) => {
         </div>
       </Link>
 
-      <div className="overflow-y-auto max-h-[300px] mb-4">
+      <div className="overflow-y-auto max-h-[200px] mb-4">
         {cartItems.length === 0 ? (
           <div className="justify-center text-center font-extrabold text-amber-500 mb-4">
             Empty Cart
@@ -122,7 +122,7 @@ const Cart = ({ resInfo }) => {
             Clear Cart
           </button>
         </div>
-        <div className="flex justify-between mb-2">
+        <div className="flex justify-between mb-2 font-semibold">
           <span>Item Total</span>
           <span>₹{calculateTotalCost()}</span>
         </div>

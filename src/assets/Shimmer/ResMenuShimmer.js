@@ -3,7 +3,7 @@ import "./ResMenuShimmer.css";
 const ResMenuShimmer = () => {
   return (
     <>
-      <div className="shimmer flex flex-row p-5 py-36"></div>
+      <div className="shimmer flex flex-row p-5 py-36 -mt-8 md:mt-0"></div>
       <div className="justify-center items-center flex flex-row">
         <div className="shimmer px-28 p-5  rounded-full  -mt-[22px] mb-5  text-center"></div>
       </div>

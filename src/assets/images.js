@@ -17,16 +17,18 @@ export function Error404({ width = "w-[40rem]", height = "h-[25rem]" }) {
 const ec = new URL("../assets/EmptyCart.png", import.meta.url);
 
 export function EmptyCartImage({
-  width = "h-auto]",
-  height = " w-auto",
+  width = "w-auto",
+  height = " h-auto",
   ml = "ml-auto",
 }) {
   return (
-    <img
-      src={ec}
-      className={`xl:${ml} ${width} ${height} object-cover`}
-      alt="EmptyCart"
-    />
+    <div className="flex items-center justify-center h-auto  ">
+      <img
+        src={ec}
+        className={`xl:${ml} ${width} ${height} object-cover `}
+        alt="EmptyCart"
+      />
+    </div>
   );
 }
 
