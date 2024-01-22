@@ -2,8 +2,8 @@ const Offers = ({ offers }) => {
   // console.log(offers);
   return (
     <div className="flex justify-center items-center mb-5 p-5">
-      <div className="menu overflow-x-scroll justify-center text-center items-center z-20 p-4 md:w-[55%] rounded-2xl">
-        <div className="flex mx-auto px-5 space-x-4 scrollbar">
+      <div className="menu overflow-x-scroll justify-center  text-center items-center z-20 p-4 md:w-[55%] rounded-2xl">
+        <div className="flex mx-auto  space-x-4 scrollbar">
           {offers.map((offerItem, index) => (
             <div
               key={index}

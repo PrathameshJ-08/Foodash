@@ -15,7 +15,7 @@ const NestedCategory = (props) => {
   return (
     <>
       <div className="mb-2 md:w-3/4 lg:w-1/2 xl:w-2/5 mx-auto py-4 rounded-xl mt-12">
-        <h2 className="px-5 md:text-2xl text-lg font-bold text-center mb-4">
+        <h2 className="px-5 md:text-2xl text-xl font-bold text-center mb-4">
           {data2 && data2.title && data2.title.toUpperCase()}
         </h2>
         <div className="w-3/4 md:w-1/2 lg:w-1/4 border-t-4 border-gray-700 mx-auto"></div>
