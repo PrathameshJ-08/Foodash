@@ -62,8 +62,8 @@ const Login = ({
   return (
     <>
       {showLogin && (
-        <div className="p-0 m-0 right-0 top-0 absolute md:w-[418px] w-screen md:h-[46.45rem] ">
-          <div className="z-50 pointer-events-auto md:h-[46.45rem]  max-w-[418px] right-0 p-10 bg-slate-100 rounded-md shadow-md absolute">
+        <div className="p-0 m-0 right-0 top-0 absolute md:w-[418px] w-screen md:h-[46.45rem] h-screen">
+          <div className="z-50 pointer-events-auto md:h-[46.45rem] h-screen max-w-[418px] right-0 p-10 bg-slate-100 rounded-md shadow-md absolute">
             <p
               className="absolute top-4 left-4 cursor-pointer"
               onClick={handleClose}

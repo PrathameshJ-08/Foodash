@@ -59,11 +59,13 @@ const Landing = () => {
   return (
     <div className="">
       {showForm && (
-        <div className="bg-black w-full absolute bg-opacity-75 md:h-[46.45rem]"></div>
+        <div className="bg-black w-full absolute bg-opacity-75 md:h-[46.45rem] h-screen"></div>
       )}
       <div
         className={`${
-          showForm ? "md:h-[46.45rem] overflow-clip pointer-events-none" : ""
+          showForm
+            ? "md:h-[46.45rem] overflow-clip pointer-events-none h-screen"
+            : ""
         }`}
       >
         <div
