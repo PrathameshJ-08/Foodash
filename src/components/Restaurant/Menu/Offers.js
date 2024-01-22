@@ -2,7 +2,7 @@ const Offers = ({ offers }) => {
   // console.log(offers);
   return (
     <div className="flex justify-center items-center mb-5 p-5 ">
-      <div className="menu overflow-x-scroll justify-center bg-black text-center items-center z-20 md:p-4 py-4  md:w-[55%] rounded-2xl">
+      <div className="menu overflow-x-scroll justify-center text-center items-center z-20 md:p-4 py-4  md:w-[55%] rounded-2xl">
         <div className="flex mx-auto md:px-5 space-x-4 scrollbar ">
           {offers.map((offerItem, index) => (
             <div
