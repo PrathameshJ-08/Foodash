@@ -43,12 +43,10 @@ const AppLayout = () => {
   return (
     <UserProvider>
       <Provider store={appStore}>
-        <div>
-          {renderHeader}
-          <Outlet />
-          {/* <Footer /> */}
-          {renderFooter}
-        </div>
+        {renderHeader}
+        <Outlet />
+        {/* <Footer /> */}
+        {renderFooter}
       </Provider>{" "}
     </UserProvider>
   );

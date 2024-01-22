@@ -6,7 +6,7 @@ html {
   background-color: rgba(244, 244, 245, 0.668);
 }
 body {
-  min-height: 100vh;
+  /* min-height: 100vh; */
 
   --scrollbar-primary-color: #064994;
   --text-color: #0fe0c1;
@@ -27,7 +27,6 @@ body::-webkit-scrollbar-thumb {
     var(--text-color)
   );
   border-radius: 9px;
-  height: 16px;
 }
 
 .menu::-webkit-scrollbar {

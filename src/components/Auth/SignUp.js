@@ -32,7 +32,7 @@ const SignUp = ({
 
       await updateProfile(user, { displayName: name });
 
-      // console.log("User data after signup:", auth.currentUser);
+      // console.log("User data signup:", auth.currentUser);
 
       updateUser({ name });
       setName("");
@@ -56,8 +56,8 @@ const SignUp = ({
   return (
     <>
       {showSignUp && (
-        <div className="p-0 m-0 right-0 top-0 absolute w-[418px]">
-          <div className="z-50 pointer-events-auto h-screen max-w-[418px] right-0 p-10 bg-slate-100 rounded-md shadow-md absolute">
+        <div className="p-0 m-0 right-0 top-0 absolute w-[418px] md:h-[46.45rem]">
+          <div className="z-50 pointer-events-auto md:h-[46.45rem] max-w-[418px] right-0 p-10 bg-slate-100 rounded-md shadow-md absolute">
             <p
               className="absolute top-4 left-4 cursor-pointer"
               onClick={handleClose}

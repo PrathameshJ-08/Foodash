@@ -5,13 +5,13 @@ const Cities = ({ showAllCities }) => {
   const { citiesData } = useLocation();
   console.log(citiesData);
   return (
-    <div className="px-44 border-t-[1px] border-gray-300 pt-6">
-      <h1 className="font-bold text-xl pb-12">
+    <div className="md:px-44 px-4 border-t-[1px] border-gray-300 pt-6">
+      <h1 className="font-bold md:text-xl pb-12">
         Other cities that we deliver to:
       </h1>
       <div className="flex justify-center">
         {showAllCities && (
-          <div className="grid grid-cols-4 gap-x-32 gap-y-4">
+          <div className="grid md:grid-cols-4 grid-cols-3  md:gap-x-32 gap-x-10 gap-y-4 text-xs md:text-base">
             {citiesData.map((city, index) => (
               <span key={index}>{city}</span>
             ))}

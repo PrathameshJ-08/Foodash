@@ -60,7 +60,7 @@ const Header = () => {
           )}
         </div>
       )}
-      <div className="z-40 md:px-24 sm:px-2 bg-zinc-100 fixed top-0 w-full flex justify-between shadow-md border-t-4 border-emerald-400 text-slate-700 ">
+      <div className="z-40 md:px-24 sm:px-2 bg-zinc-100 fixed top-0 w-full flex justify-between shadow-md border-t-4 border-emerald-400 text-slate-700 h-16 md:h-[6.2rem]">
         <div className="w-12 md:w-24">
           <Link to="/">
             <Logo />

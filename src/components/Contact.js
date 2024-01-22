@@ -31,16 +31,18 @@ const Contact = () => {
 
   return (
     <div
-      className="flex justify-center items-center h-screen p-8 md:p-16 -mt-24 md:mt-0"
+      className="flex justify-center items-center min-h-screen p-8 md:p-16 -mt-9 md:mt-0 overflow-clip"
       style={{
         backgroundImage:
           "url('https://4kwallpapers.com/images/walls/thumbs_3t/1022.jpg')",
         height: "100vh",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
     >
-      <div className="md:h-96 md:p-6 w-full md:w-3/4 relative rounded-3xl  xl:-mt-32 overflow-clip ">
-        <div className="absolute inset-0 bg-gradient-to-r from-teal-200 to-lime-200 opacity-80 filter blur-md shadow-lg rounded-2xl "></div>
-        <div className="md:flex md:flex-row md:justify-center items-center relative z-10 ">
+      <div className="md:h-96 md:p-6 w-full md:w-3/4 relative rounded-3xl xl:-mt-32 overflow-clip">
+        <div className="absolute inset-0 bg-gradient-to-r from-teal-200 to-lime-200 opacity-80 filter blur-md shadow-lg rounded-2xl"></div>
+        <div className="md:flex md:flex-row md:justify-center items-center relative z-10">
           <div className="md:w-1/3 flex justify-center items-center">
             <div className="flex flex-col justify-center items-center md:items-start p-6">
               <img
