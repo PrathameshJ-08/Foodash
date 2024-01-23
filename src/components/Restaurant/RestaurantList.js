@@ -134,7 +134,11 @@ const RestaurantList = () => {
                 key={rlist.info.id}
                 className="flex-shrink-0 md:mb-0 sm:w-44 md:w-[246px] xl:w-auto"
               >
-                <Link to={`restaurants/${rlist.info.id}`} className="block">
+                <Link
+                  to={`restaurants/${rlist.info.id}`}
+                  className="block"
+                  onClick={() => handleRestaurantClick(rlist.info.id)}
+                >
                   <ResCard resObj={rlist} />
                 </Link>
               </div>
