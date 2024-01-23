@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RestaurantCard, { withPromoted } from "./RestaurantCard";
+import RestaurantCard, { withPromoted, withWidth } from "./RestaurantCard";
 import Shimmer from "../../assets/Shimmer/Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../../utils/hooks/useOnlineStatus";
@@ -22,6 +22,7 @@ const RestaurantList = () => {
   });
 
   const ResCardPromoted = withPromoted(RestaurantCard);
+  const ResCard = withWidth(RestaurantCard);
 
   useEffect(() => {
     fetchData();
@@ -123,7 +124,7 @@ const RestaurantList = () => {
                 className="flex-shrink-0 md:mb-0 sm:w-44 md:w-[246px] xl:w-auto"
               >
                 <Link to={`restaurants/${rlist.info.id}`} className="block">
-                  <RestaurantCard resObj={rlist} />
+                  <ResCard resObj={rlist} />
                 </Link>
               </div>
             ))}
@@ -132,7 +133,6 @@ const RestaurantList = () => {
       </div>
 
       <h1 className="text-2xl font-bold mt-12 -mb-4">Local bites to you</h1>
-      <h1 className="text-2xl font-bold mt-12 -mb-4"></h1>
 
       <FilterRestaurant
         filterOptions={filterOptions}

@@ -19,14 +19,14 @@ const RestaurantCard = (props) => {
 
   return (
     <div
-      className={`xl:h-auto relative transition-all duration-300 ease-in-out hover:cursor-pointer hover:transform hover:scale-105 hover:bg-gray-200 sm:hover:bg-stone-50 mb-2 xl:mb-0 grid sm:block grid-cols-6 sm:grid-cols-none rounded-xl border-y-2 border-dashed border-teal-600 sm:border-none xl:w-[246px] ${
+      className={`xl:h-auto relative transition-all duration-300 ease-in-out hover:cursor-pointer hover:transform hover:scale-105 hover:bg-gray-200 sm:hover:bg-stone-50 mb-2 xl:mb-0 grid sm:block grid-cols-4 sm:grid-cols-none rounded-xl border-y-2 border-dashed border-teal-600 sm:border-none   ${
         isClosed ? "grayscale" : ""
       }`}
     >
       {cloudinaryImageId ? (
-        <div className="relative col col-span-2 xl:h-[160px]">
+        <div className="relative col col-span-1 xl:h-[180px]">
           <img
-            className="rounded-xl  object-cover w-full h-full"
+            className="rounded-xl h-28 w-28 object-cover sm:w-full sm:h-full"
             src={RESTAURANT_IMG_URL + cloudinaryImageId}
             alt={name}
           />
@@ -41,7 +41,7 @@ const RestaurantCard = (props) => {
         </div>
       )}
 
-      <div className="sm:mx-2 col-span-4 p-2 sm:px-0">
+      <div className="sm:mx-2 col-span-3 p-2 sm:px-0">
         <div className="overflow-hidden">
           <h1 className="font-bold text-lg truncate">{name}</h1>
         </div>
@@ -76,6 +76,15 @@ export const withPromoted = (RestaurantCard) => {
         <label className="absolute bg-gradient-to-r from-teal-500 to-green-500 text-white px-3  rounded-lg overflow-hidden z-10 shadow-lg m-1 text-xs sm:text-base font-black">
           4.5+
         </label>
+        <RestaurantCard {...props} />
+      </div>
+    );
+  };
+};
+export const withWidth = (RestaurantCard) => {
+  return (props) => {
+    return (
+      <div className="lg:w-[246px] overflow-clip rounded-xl">
         <RestaurantCard {...props} />
       </div>
     );
