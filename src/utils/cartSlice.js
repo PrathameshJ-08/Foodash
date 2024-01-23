@@ -71,9 +71,9 @@ const cartSlice = createSlice({
       );
     },
 
-    clearCart: (state) => {
+    clearCart: () => {
       saveCartToStorage({ items: [] });
-      return { items: [], currentRestaurant: null };
+      return { items: [] };
     },
 
     setRestaurant: (state, action) => {

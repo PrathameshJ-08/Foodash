@@ -16,8 +16,8 @@ import { useState } from "react";
 const MenuItemList = ({ items }) => {
   const [showModal, setShowModal] = useState(false);
   const [itemToAdd, setItemToAdd] = useState(null);
-  const cartItems = useSelector((store) => store.cart.items) || [];
 
+  const cartItems = useSelector((store) => store.cart.items) || [];
   const dispatch = useDispatch();
   const currentRestaurant = useSelector(
     (store) => store.cart.currentRestaurant

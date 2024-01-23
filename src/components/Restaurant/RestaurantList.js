@@ -16,6 +16,7 @@ const RestaurantList = () => {
   const handleRestaurantClick = (restaurantId) => {
     dispatch(setRestaurant(restaurantId));
   };
+
   useEffect(() => {
     dispatch(setRestaurant(null));
   }, []);
