@@ -75,6 +75,7 @@ const cartSlice = createSlice({
       saveCartToStorage({ items: [] });
       return { items: [], currentRestaurant: null };
     },
+
     setRestaurant: (state, action) => {
       state.currentRestaurant = action.payload;
     },

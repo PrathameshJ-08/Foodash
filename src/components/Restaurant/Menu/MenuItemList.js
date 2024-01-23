@@ -14,16 +14,19 @@ import Modal from "../Modal";
 import { useState } from "react";
 
 const MenuItemList = ({ items }) => {
-  const dispatch = useDispatch();
+  const [showModal, setShowModal] = useState(false);
+  const [itemToAdd, setItemToAdd] = useState(null);
   const cartItems = useSelector((store) => store.cart.items) || [];
+
+  const dispatch = useDispatch();
   const currentRestaurant = useSelector(
     (store) => store.cart.currentRestaurant
   );
-  const [showModal, setShowModal] = useState(false);
-  const [itemToAdd, setItemToAdd] = useState(null);
+
   const isItemInCart = (itemId) =>
     cartItems.some((item) => item.card.info.id === itemId);
 
+  // ---functions----------------
   const handleAddToCart = (item) => {
     if (!currentRestaurant) {
       dispatch(addToCart(item));
