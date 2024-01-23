@@ -41,7 +41,7 @@ const Header = () => {
     navigate("/");
   };
 
-  const cartItems = useSelector((store) => store.cart.items);
+  const cartItems = useSelector((store) => store.cart.items) || []; // Provide a default empty array
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0

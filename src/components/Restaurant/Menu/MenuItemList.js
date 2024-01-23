@@ -12,7 +12,7 @@ import QuantityButton from "../../../utils/hooks/QuantityButton";
 
 const MenuItemList = ({ items }) => {
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart.items);
+  const cartItems = useSelector((store) => store.cart.items) || [];
 
   const isItemInCart = (itemId) =>
     cartItems.some((item) => item.card.info.id === itemId);

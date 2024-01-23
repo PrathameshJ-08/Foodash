@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   increaseItemQuantity,
@@ -7,7 +7,7 @@ import {
 } from "../../utils/cartSlice";
 import { Link } from "react-router-dom";
 
-const Cart = ({ resInfo }) => {
+const Cart = () => {
   const [tip, setTip] = useState("0");
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
@@ -25,11 +25,16 @@ const Cart = ({ resInfo }) => {
     setTip("0");
   };
 
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify({ items: cartItems }));
+  }, [cartItems]);
+
   const calculateTotalCost = () => {
     return cartItems.reduce((total, item) => {
       const itemCost =
         item.card.info.price / 100 || item.card.info.defaultPrice / 100;
-      return total + item.quantity * itemCost;
+      const cost = total + item.quantity * itemCost;
+      return Math.ceil(cost);
     }, 0);
   };
 

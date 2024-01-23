@@ -21,7 +21,7 @@ const MenuList = () => {
   const [openCategory, setOpenCategory] = useState(null);
   const [showCart, setShowCart] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
-  const cartItems = useSelector((store) => store.cart.items);
+  const cartItems = useSelector((store) => store.cart.items) || [];
 
   if (resInfo === null) return <ResMenuShimmer />;
   const offer =
@@ -169,7 +169,7 @@ const MenuList = () => {
         {showCart && (
           <>
             <div className="fixed right-5 bottom-5 shadow-lg z-30">
-              <Cart id={id} />
+              <Cart />
             </div>
           </>
         )}

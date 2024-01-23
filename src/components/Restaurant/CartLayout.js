@@ -1,18 +1,24 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+
 import Cart from "./Cart";
+import { clearCart } from "../../utils/cartSlice";
+import useFetchRestaurants from "../../utils/hooks/useFetchRestaurants";
 import { useUserContext } from "../../utils/userContext";
+import { OrderImg } from "../../assets/images";
+
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
-import { OrderImg } from "../../assets/images";
-import { Link } from "react-router-dom";
-import useFetchRestaurants from "../../utils/hooks/useFetchRestaurants";
 
 const CheckoutPage = () => {
   const [order, setOrder] = useState(false);
   const { user } = useUserContext();
   const { location } = useFetchRestaurants();
+  const dispatch = useDispatch();
   const handleOrder = () => {
+    dispatch(clearCart());
     setOrder(!order);
   };
 
