@@ -71,11 +71,10 @@ const cartSlice = createSlice({
       );
     },
 
-    clearCart: () => {
+    clearCart: (state) => {
       saveCartToStorage({ items: [] });
-      return { items: [] };
+      return { items: [], currentRestaurant: null };
     },
-
     setRestaurant: (state, action) => {
       state.currentRestaurant = action.payload;
     },
