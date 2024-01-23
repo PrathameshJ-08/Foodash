@@ -18,9 +18,11 @@ const Header = () => {
     if (user.name) {
       setIsLoading(true);
       setShowNotification(true);
+
       const intervalId = setInterval(() => {
         setLoadingWidth((prevWidth) => {
           const newWidth = Math.max(parseFloat(prevWidth) - 1, 0) + "%";
+
           if (newWidth === "0%") {
             setIsLoading(false);
             setShowNotification(false);
@@ -41,7 +43,8 @@ const Header = () => {
     navigate("/");
   };
 
-  const cartItems = useSelector((store) => store.cart.items) || []; // Provide a default empty array
+  const cartItems = useSelector((store) => store.cart.items) || [];
+
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0

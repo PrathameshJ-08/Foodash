@@ -89,4 +89,5 @@ const OrderPage = () => {
     </div>
   );
 };
+
 export default CheckoutPage;

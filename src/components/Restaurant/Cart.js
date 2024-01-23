@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+
 import {
   increaseItemQuantity,
   decreaseItemQuantity,
   clearCart,
 } from "../../utils/cartSlice";
-import { Link } from "react-router-dom";
 
 const Cart = () => {
   const [tip, setTip] = useState("0");
