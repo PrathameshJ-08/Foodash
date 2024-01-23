@@ -5,22 +5,35 @@ import {
   addToCart,
   increaseItemQuantity,
   decreaseItemQuantity,
+  clearCart,
 } from "../../../utils/cartSlice";
 
 import { MENU_IMG_API } from "../../../utils/constants";
 import QuantityButton from "../../../utils/hooks/QuantityButton";
+import Modal from "../Modal";
+import { useState } from "react";
 
 const MenuItemList = ({ items }) => {
   const dispatch = useDispatch();
   const cartItems = useSelector((store) => store.cart.items) || [];
-
+  const currentRestaurant = useSelector(
+    (store) => store.cart.currentRestaurant
+  );
+  const [showModal, setShowModal] = useState(false);
+  const [itemToAdd, setItemToAdd] = useState(null);
   const isItemInCart = (itemId) =>
     cartItems.some((item) => item.card.info.id === itemId);
 
   const handleAddToCart = (item) => {
-    dispatch(addToCart(item));
+    if (!currentRestaurant) {
+      dispatch(addToCart(item));
+    } else if (currentRestaurant === item.card.info.restaurantId) {
+      dispatch(addToCart(item));
+    } else {
+      setShowModal(true);
+      setItemToAdd(item);
+    }
   };
-
   const handleIncreaseQuantity = (itemId) => {
     dispatch(increaseItemQuantity(itemId));
   };
@@ -29,8 +42,23 @@ const MenuItemList = ({ items }) => {
     dispatch(decreaseItemQuantity(itemId));
   };
 
+  const handleNo = () => {
+    setShowModal(false);
+  };
+
+  const handleYes = () => {
+    if (itemToAdd) {
+      dispatch(clearCart());
+      dispatch(addToCart(itemToAdd));
+      setShowModal(false);
+    }
+  };
+
   return (
     <>
+      {showModal && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-80 z-50"></div>
+      )}
       {items.map((item, index) => (
         <div
           key={index}
@@ -92,6 +120,7 @@ const MenuItemList = ({ items }) => {
           </div>
         </div>
       ))}
+      {showModal && <Modal onNo={handleNo} onYes={handleYes} />}
     </>
   );
 };

@@ -75,6 +75,10 @@ const cartSlice = createSlice({
       saveCartToStorage({ items: [] });
       return { items: [] };
     },
+
+    setRestaurant: (state, action) => {
+      state.currentRestaurant = action.payload;
+    },
   },
 });
 
@@ -84,6 +88,7 @@ export const {
   clearCart,
   increaseItemQuantity,
   decreaseItemQuantity,
+  setRestaurant,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

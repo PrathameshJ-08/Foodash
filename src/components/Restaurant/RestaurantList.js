@@ -7,8 +7,16 @@ import Offline from "../../assets/Offline";
 import useFetchRestaurants from "../../utils/hooks/useFetchRestaurants";
 import FilterRestaurant from "./FilterRestaurant";
 import Banner from "./Banner";
+import { useDispatch } from "react-redux";
+import { setRestaurant } from "../../utils/cartSlice";
 
 const RestaurantList = () => {
+  const dispatch = useDispatch();
+
+  const handleRestaurantClick = (restaurantId) => {
+    dispatch(setRestaurant(restaurantId));
+  };
+
   const { listOfRes, filteredRes, setFilteredRes, fetchData, banner } =
     useFetchRestaurants();
   const [searchText, setSearchText] = useState("");
@@ -145,7 +153,11 @@ const RestaurantList = () => {
       />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 xl:gap-10 sm:p-8 md:px-0 z-0 py-6 border-y-2">
         {filteredRes.map((rlist) => (
-          <Link key={rlist.info.id} to={`restaurants/${rlist.info.id}`}>
+          <Link
+            key={rlist.info.id}
+            to={`restaurants/${rlist.info.id}`}
+            onClick={() => handleRestaurantClick(rlist.info.id)}
+          >
             {rlist.info.avgRating >= 4.5 ? (
               <ResCardPromoted resObj={rlist} />
             ) : (

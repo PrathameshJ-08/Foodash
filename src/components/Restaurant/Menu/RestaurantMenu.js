@@ -206,7 +206,7 @@ const MenuList = () => {
           ))}
         </div>
         <button
-          className={`z-50 fixed ${
+          className={`z-40 fixed ${
             showCart ? "bottom-5 right-20" : "bottom-20 right-[26px]"
           } bg-amber-500 hover:bg-amber-700 text-white font-bold text-2xl p-2 rounded-full`}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
