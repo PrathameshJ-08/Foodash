@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 
-import Cart from "./Cart";
+import Cart, { withBackToRes } from "./Cart";
 import { clearCart } from "../../utils/cartSlice";
+import { setCartRestaurant, setResDetails } from "../../utils/restaurantSlice";
 import useFetchRestaurants from "../../utils/hooks/useFetchRestaurants";
 import { useUserContext } from "../../utils/userContext";
 import { OrderImg } from "../../assets/images";
@@ -18,9 +19,12 @@ const CheckoutPage = () => {
   const { location } = useFetchRestaurants();
   const dispatch = useDispatch();
   const handleOrder = () => {
+    dispatch(setCartRestaurant(null));
+    dispatch(setResDetails(null));
     dispatch(clearCart());
     setOrder(!order);
   };
+  const CartSection = withBackToRes(Cart);
 
   return (
     <>
@@ -55,8 +59,8 @@ const CheckoutPage = () => {
                 <span>Payment</span>
               </div>
             </div>
-            <div className="lg:w-4/12 pt-12">
-              <Cart />
+            <div className="lg:w-4/12 pt-12 p-4">
+              <CartSection />
             </div>
           </div>
           <div className="text-center p-12 bg-teal-100">

@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import {
   increaseItemQuantity,
   decreaseItemQuantity,
   clearCart,
 } from "../../utils/cartSlice";
+import { setCartRestaurant, setResDetails } from "../../utils/restaurantSlice";
+import { RESTAURANT_IMG_URL } from "../../utils/constants";
 
-const Cart = () => {
+const Cart = ({ from }) => {
   const [tip, setTip] = useState("0");
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
@@ -21,9 +23,16 @@ const Cart = () => {
     dispatch(decreaseItemQuantity(itemId));
   };
 
+  const navigate = useNavigate();
+
   const handleClearCart = () => {
+    dispatch(setCartRestaurant(null));
     dispatch(clearCart());
     setTip("0");
+    if (from == "header") {
+      navigate("/emptycart");
+      dispatch(setResDetails(null));
+    }
   };
 
   useEffect(() => {
@@ -54,6 +63,13 @@ const Cart = () => {
             totalGSTAndCharges
         );
 
+  if (from == "menu") {
+    console.log("menu");
+  } else if (from == "header") {
+    console.log("header");
+  } else {
+    console.log("none");
+  }
   return (
     <div className="w-[366px] mx-auto  rounded-md shadow-md p-4  bg-slate-100 z-50 ">
       <Link to="/cart">
@@ -174,6 +190,42 @@ const Cart = () => {
       </div>
     </div>
   );
+};
+
+export const withBackToRes = (Cart) => {
+  const ResInfo = useSelector((store) => store.restaurant.resDetails);
+  const img = RESTAURANT_IMG_URL + ResInfo.cloudinaryImageId;
+  const currentCartRestaurant = useSelector(
+    (store) => store.restaurant.currentCartRestaurant
+  );
+  const navigate = useNavigate();
+  const handleBackToRes = () => {
+    navigate(`/rlist/restaurants/${currentCartRestaurant}`);
+  };
+  return (props) => {
+    return (
+      <div className="flex flex-col items-center shadow-md w-[366px] ">
+        <div className="flex flex-col items-center shadow-md w-[366px]">
+          <div
+            className="w-[366px] mx-auto rounded-t-md p-4 pb-2 bg-gray-100 flex items-center -mb-14 space-x-4 z-30 cursor-pointer hover:bg-slate-100"
+            onClick={handleBackToRes}
+          >
+            <img src={img} className="w-28 rounded-md" alt="Product Image" />
+            <div className="flex flex-col flex-grow">
+              <span className="text-xl font-semibold">{ResInfo.name}</span>
+              <span className="text-xs">
+                {ResInfo.locality}, {ResInfo.areaName}
+              </span>
+              <div className="p-1 border-b-2 border-gray-500 w-12"></div>
+            </div>
+          </div>
+        </div>
+        <div className="">
+          <Cart {...props} from={"header"} />
+        </div>
+      </div>
+    );
+  };
 };
 
 export default Cart;

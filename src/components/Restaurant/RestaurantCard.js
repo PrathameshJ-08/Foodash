@@ -31,8 +31,8 @@ const RestaurantCard = (props) => {
             alt={name}
           />
           <label className="absolute bg-gradient-to-t from-black text-sm sm:text-xl md:text-xl font-bold text-white sm:w-full w-28 pt-6 pb-2 px-2 sm:mt-[165px] xl:mt-[126px] bottom-0 sm:text-center rounded-xl cursor-pointer">
-            {aggregatedDiscountInfoV3.header}{" "}
-            {aggregatedDiscountInfoV3.subHeader}
+            {aggregatedDiscountInfoV3?.header}{" "}
+            {aggregatedDiscountInfoV3?.subHeader}
           </label>
         </div>
       ) : (

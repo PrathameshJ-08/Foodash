@@ -12,30 +12,49 @@ import { MENU_IMG_API } from "../../../utils/constants";
 import QuantityButton from "../../../utils/hooks/QuantityButton";
 import Modal from "../Modal";
 import { useState } from "react";
+import {
+  setCartRestaurant,
+  setResDetails,
+  setRestaurant,
+} from "../../../utils/restaurantSlice";
+import { useEffect } from "react";
 
-const MenuItemList = ({ items }) => {
+const MenuItemList = ({ items, rinfo }) => {
   const [showModal, setShowModal] = useState(false);
   const [itemToAdd, setItemToAdd] = useState(null);
 
   const cartItems = useSelector((store) => store.cart.items) || [];
   const dispatch = useDispatch();
+
   const currentRestaurant = useSelector(
-    (store) => store.cart.currentRestaurant
+    (store) => store.restaurant.currentRestaurant
+  );
+  const currentCartRestaurant = useSelector(
+    (store) => store.restaurant.currentCartRestaurant
   );
 
   const isItemInCart = (itemId) =>
     cartItems.some((item) => item.card.info.id === itemId);
 
   // ---functions----------------
+
+  useEffect(() => {
+    dispatch(setResDetails(rinfo));
+  }, []);
+
   const handleAddToCart = (item) => {
-    if (!currentRestaurant) {
+    if (!currentCartRestaurant) {
+      dispatch(setCartRestaurant(rinfo.id));
       dispatch(addToCart(item));
-    } else if (currentRestaurant === item.card.info.restaurantId) {
+    } else if (currentRestaurant === currentCartRestaurant) {
       dispatch(addToCart(item));
     } else {
       setShowModal(true);
       setItemToAdd(item);
     }
+
+    console.log(currentRestaurant);
+    console.log(currentCartRestaurant + "e");
   };
   const handleIncreaseQuantity = (itemId) => {
     dispatch(increaseItemQuantity(itemId));
@@ -51,6 +70,8 @@ const MenuItemList = ({ items }) => {
 
   const handleYes = () => {
     if (itemToAdd) {
+      dispatch(setRestaurant(rinfo.id));
+      dispatch(setCartRestaurant(rinfo.id));
       dispatch(clearCart());
       dispatch(addToCart(itemToAdd));
       setShowModal(false);

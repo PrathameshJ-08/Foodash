@@ -8,7 +8,7 @@ import useFetchRestaurants from "../../utils/hooks/useFetchRestaurants";
 import FilterRestaurant from "./FilterRestaurant";
 import Banner from "./Banner";
 import { useDispatch } from "react-redux";
-import { setRestaurant } from "../../utils/cartSlice";
+import { setRestaurant } from "../../utils/restaurantSlice";
 
 const RestaurantList = () => {
   const dispatch = useDispatch();

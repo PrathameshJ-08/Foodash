@@ -3,7 +3,7 @@ import MenuItemList from "./MenuItemList";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const Accordion = ({ data, isOpen, onToggle }) => {
+const Accordion = ({ data, isOpen, onToggle, rinfo }) => {
   const categoryTitle = data.title;
   const itemCount = data.itemCards.length;
 
@@ -25,7 +25,7 @@ const Accordion = ({ data, isOpen, onToggle }) => {
             )}
           </span>
         </div>
-        {isOpen && <MenuItemList items={data.itemCards} />}
+        {isOpen && <MenuItemList items={data.itemCards} rinfo={rinfo} />}
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./Accordion";
 
 const NestedCategory = (props) => {
-  const { data2 } = props;
+  const { data2, rinfo } = props;
   const [accordionStates, setAccordionStates] = useState({});
 
   const handleToggle = (categoryId) => {
@@ -28,6 +28,7 @@ const NestedCategory = (props) => {
             data={category}
             isOpen={accordionStates[category.title]}
             onToggle={() => handleToggle(category.title)}
+            rinfo={rinfo}
           />
         ))}
     </>

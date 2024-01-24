@@ -57,7 +57,6 @@ const cartSlice = createSlice({
           removedItem.totalPrice =
             removedItem.quantity * removedItem.card.info.price;
         } else {
-          // quantity 1, remove from cart
           state.items = state.items.filter(
             (item) => item.card.info.id !== action.payload
           );
@@ -75,10 +74,6 @@ const cartSlice = createSlice({
       saveCartToStorage({ items: [] });
       return { items: [] };
     },
-
-    setRestaurant: (state, action) => {
-      state.currentRestaurant = action.payload;
-    },
   },
 });
 
@@ -88,7 +83,6 @@ export const {
   clearCart,
   increaseItemQuantity,
   decreaseItemQuantity,
-  setRestaurant,
 } = cartSlice.actions;
 
 export default cartSlice.reducer;

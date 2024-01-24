@@ -112,13 +112,17 @@ const MenuList = () => {
     return cartItems.length > 0;
   };
 
+  const img = RESTAURANT_IMG_URL + cloudinaryImageId;
+
+  const rinfo = resInfo?.data?.cards[0]?.card?.card?.info;
+
   return (
     <>
       <div className="flex flex-col">
         <div className="flex sm:flex-row flex-col items-center text-center sm:text-start sm:items-stretch bg-gradient-to-tr from-slate-950 via-cyan-800 to-teal-500 xl:mb-0 sm:mb-[-1.5rem] p-5 xl:p-10 py-16 -mt-10 md:mt-0">
           <img
             className="rounded-2xl xl:mb-0  xl:flex-shrink-0 w-96 sm:self-center md:self-start"
-            src={RESTAURANT_IMG_URL + cloudinaryImageId}
+            src={img}
             alt={name}
           />
           <div className="grid gap-5 sm:gap-0 ">
@@ -169,7 +173,7 @@ const MenuList = () => {
         {showCart && (
           <>
             <div className="fixed right-5 bottom-5 shadow-lg z-30">
-              <Cart />
+              <Cart from={"menu"} />
             </div>
           </>
         )}
@@ -195,6 +199,7 @@ const MenuList = () => {
               data={category.card.card}
               showItems={index === openCategory}
               setShowIndex={() => toggleCategory(index)}
+              rinfo={rinfo}
             />
           ))}
 
@@ -202,6 +207,7 @@ const MenuList = () => {
             <NestedCategory
               key={category2.card.card.title}
               data2={category2.card.card}
+              rinfo={rinfo}
             />
           ))}
         </div>
