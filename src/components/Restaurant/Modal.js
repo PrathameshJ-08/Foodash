@@ -2,7 +2,7 @@ import React from "react";
 
 const Modal = ({ onNo, onYes }) => {
   return (
-    <div className="fixed inset-0 flex items-end justify-center z-50 bottom-5 px-5">
+    <div className="fixed inset-0 flex items-center lg:items-end justify-center z-50 lg:bottom-5 px-5">
       <div className="w-full md:w-[30rem] bg-white rounded-xl p-5 shadow-md border-4 border-sky-700">
         <div>
           <p className="md:text-2xl font-bold ">Items already in the cart.</p>

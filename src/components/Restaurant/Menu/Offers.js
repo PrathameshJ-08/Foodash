@@ -14,7 +14,7 @@ const Offers = ({ offers }) => {
                 {offerItem.info.header}
               </span>
               <span className="text-xs text-gray-600">
-                {offerItem.info.couponCode} | {offerItem.info.description}
+                {offerItem.info.couponCode} {"|" + offerItem.info.description}
               </span>
             </div>
           ))}
