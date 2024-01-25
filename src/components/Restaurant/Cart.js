@@ -63,13 +63,13 @@ const Cart = ({ from }) => {
             totalGSTAndCharges
         );
 
-  if (from == "menu") {
-    console.log("menu");
-  } else if (from == "header") {
-    console.log("header");
-  } else {
-    console.log("none");
-  }
+  // if (from == "menu") {
+  //   console.log("menu");
+  // } else if (from == "header") {
+  //   console.log("header");
+  // } else {
+  //   console.log("none");
+  // }
   return (
     <div className="w-[366px] mx-auto  rounded-md shadow-md p-4  bg-slate-100 z-50 ">
       <Link to="/cart">
@@ -193,13 +193,17 @@ const Cart = ({ from }) => {
 };
 
 export const withBackToRes = (Cart) => {
+  const dispatch = useDispatch();
+
   const ResInfo = useSelector((store) => store.restaurant.resDetails);
-  const img = RESTAURANT_IMG_URL + ResInfo.cloudinaryImageId;
+  const img = ResInfo ? RESTAURANT_IMG_URL + ResInfo.cloudinaryImageId : null;
+
   const currentCartRestaurant = useSelector(
     (store) => store.restaurant.currentCartRestaurant
   );
   const navigate = useNavigate();
   const handleBackToRes = () => {
+    dispatch(setCartRestaurant(ResInfo.id));
     navigate(`/rlist/restaurants/${currentCartRestaurant}`);
   };
   return (props) => {

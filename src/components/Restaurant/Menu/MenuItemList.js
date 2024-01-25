@@ -56,12 +56,16 @@ const MenuItemList = ({ items, rinfo }) => {
     console.log(currentRestaurant);
     console.log(currentCartRestaurant + "e");
   };
+
   const handleIncreaseQuantity = (itemId) => {
     dispatch(increaseItemQuantity(itemId));
   };
 
   const handleDecreaseQuantity = (itemId) => {
     dispatch(decreaseItemQuantity(itemId));
+    if (cartItems.length === 1) {
+      dispatch(setCartRestaurant(null));
+    }
   };
 
   const handleNo = () => {

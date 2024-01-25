@@ -18,12 +18,14 @@ const CheckoutPage = () => {
   const { user } = useUserContext();
   const { location } = useFetchRestaurants();
   const dispatch = useDispatch();
+
   const handleOrder = () => {
     dispatch(setCartRestaurant(null));
     dispatch(setResDetails(null));
     dispatch(clearCart());
     setOrder(!order);
   };
+
   const CartSection = withBackToRes(Cart);
 
   return (
