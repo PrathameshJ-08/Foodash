@@ -26,7 +26,7 @@ import Offline from "./assets/Offline";
 import "./index.css";
 
 import { UserProvider } from "./utils/userContext";
-import { LoadingImg, Logo } from "./assets/images.js";
+import { LoadingImg } from "./assets/images.js";
 
 const RestaurantMenu = lazy(() =>
   import("./components/Restaurant/Menu/RestaurantMenu.js")
