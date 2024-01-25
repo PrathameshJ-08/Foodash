@@ -159,6 +159,7 @@ const Landing = () => {
               src="https://web.archive.org/web/20210903175246im_/https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_1340/Lunch1_vlksgq"
               className="w-full h-44 sm:h-96 object-cover xl:h-[40rem] md:rounded-bl-3xl"
               alt="Food Image"
+              loading="lazy"
             />
           </div>
         </div>

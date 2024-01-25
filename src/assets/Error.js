@@ -3,17 +3,12 @@ import { Error404 } from "./images";
 
 const Error = () => {
   const err = useRouteError();
-  console.log(err);
 
   return (
     <section className=" bg-gradient-to-t from-orange-400 to-sky-400 py-24 font-arvo text-sky-950 p-10 h-screen">
       <div className="w-full ">
         <div className=" text-center items-center">
-          <h1 className="text-6xl text-center font-extrabold">
-            {err.status && err.statusText === undefined
-              ? "Location not detected, turn on device location"
-              : err.status + ": " + err.statusText}
-          </h1>
+          <h1 className="text-6xl text-center font-extrabold">{`${err.status}: ${err.statusText}`}</h1>
 
           <Error404 />
 

@@ -36,8 +36,8 @@ export function EmptyCartImage({
 const lg = new URL("./Images/Loading.gif", import.meta.url);
 export function LoadingImg({ width = "w-[30rem]", height = "h-[25rem]" }) {
   return (
-    <div className="flex items-center justify-center h-auto  ">
-      <img src={lg} className={`${width} xl:${height}}`} alt="Error404" />
+    <div className="flex items-center justify-center h-auto  overflow-hidden">
+      <img src={lg} className={`${width} xl:${height}}`} alt="shimmer" />
     </div>
   );
 }

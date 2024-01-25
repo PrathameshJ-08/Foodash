@@ -1,28 +1,33 @@
-import React, { Suspense, lazy, useEffect } from "react";
+import React, { Suspense, lazy, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import RestaurantList from "./components/Restaurant/RestaurantList";
 import {
   RouterProvider,
   createBrowserRouter,
   Outlet,
   useLocation,
 } from "react-router-dom";
+import { Provider } from "react-redux";
+
+import Header from "./components/Header";
+import Landing from "./components/LandingPage/Landing";
+import RestaurantList from "./components/Restaurant/RestaurantList";
 import Contact from "./components/Contact";
 import About from "./components/About";
-import Error from "./assets/Error";
-import Landing from "./components/LandingPage/Landing";
-import useOnlineStatus from "./utils/hooks/useOnlineStatus";
-import Offline from "./assets/Offline";
-import "./index.css";
+import Footer from "./components/Footer";
+
 import ResMenuShimmer from "./assets/Shimmer/ResMenuShimmer";
-import { Provider } from "react-redux";
 import appStore from "./utils/appStore";
 import CartLayout from "./components/Restaurant/CartLayout";
 import EmptyCart from "./assets/EmptyCart";
-import Login from "./components/Auth/Login";
+import Error from "./assets/Error";
+import useOnlineStatus from "./utils/hooks/useOnlineStatus";
+import Offline from "./assets/Offline";
+
+import "./index.css";
+
 import { UserProvider } from "./utils/userContext";
+import { LoadingImg, Logo } from "./assets/images.js";
+
 const RestaurantMenu = lazy(() =>
   import("./components/Restaurant/Menu/RestaurantMenu.js")
 );
@@ -34,6 +39,15 @@ const AppLayout = () => {
 
   const renderHeader = !isLandingPage && <Header />;
   const renderFooter = !(isLandingPage || isContactPage) && <Footer />;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 2000));
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
   useEffect(() => {}, [location]);
 
@@ -43,11 +57,20 @@ const AppLayout = () => {
   return (
     <UserProvider>
       <Provider store={appStore}>
-        {renderHeader}
-        <Outlet />
-        {/* <Footer /> */}
-        {renderFooter}
-      </Provider>{" "}
+        {loading ? (
+          <div className=" bg-slate-950  h-screen overflow-hidden flex items-center justify-center">
+            <div className="animate-pulse ">
+              <LoadingImg width="w-[60rem]" />
+            </div>
+          </div>
+        ) : (
+          <div>
+            {renderHeader}
+            <Outlet />
+            {renderFooter}
+          </div>
+        )}
+      </Provider>
     </UserProvider>
   );
 };
@@ -80,10 +103,7 @@ const appRouter = createBrowserRouter([
         path: "/emptycart",
         element: <EmptyCart />,
       },
-      {
-        path: "/login",
-        element: <Login />,
-      },
+
       {
         path: "/rlist/restaurants/:resId",
         element: (
