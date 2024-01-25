@@ -49,8 +49,8 @@ const CheckoutPage = () => {
                 <span>
                   {location?.address?.suburb + ", "}
                   {location?.address?.city + ", "}
-                  {location?.address?.state_district + "- "}
-                  {location?.address?.postcode + ", "}{" "}
+                  {location?.address?.state_district}
+                  {"-" + location?.address?.postcode + ", "}{" "}
                   {location?.address?.state}
                 </span>
               </div>
