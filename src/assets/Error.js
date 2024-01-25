@@ -6,11 +6,14 @@ const Error = () => {
   console.log(err);
 
   return (
-    // <section className=" bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-sky-950 via-cyan-500 to-sky-950 py-24 font-arvo text-sky-950 p-10">
     <section className=" bg-gradient-to-t from-orange-400 to-sky-400 py-24 font-arvo text-sky-950 p-10 h-screen">
       <div className="w-full ">
         <div className=" text-center items-center">
-          <h1 className="text-6xl text-center font-extrabold">{`${err.status}: ${err.statusText}`}</h1>
+          <h1 className="text-6xl text-center font-extrabold">
+            {err.status && err.statusText === undefined
+              ? "Location not detected, turn on device location"
+              : err.status + ": " + err.statusText}
+          </h1>
 
           <Error404 />
 
