@@ -18,6 +18,7 @@ import {
   setRestaurant,
 } from "../../../utils/restaurantSlice";
 import { useEffect } from "react";
+import { NoImage } from "../../../assets/images";
 
 const MenuItemList = ({ items, rinfo }) => {
   const [showModal, setShowModal] = useState(false);
@@ -114,37 +115,37 @@ const MenuItemList = ({ items, rinfo }) => {
             </p>
           </div>
           <div className="flex-shrink-0 right-0 relative">
-            {item.card.info.imageId ? (
-              <div className="relative">
+            <div className="relative">
+              {item.card.info.imageId ? (
                 <img
                   className="w-32 h-32 object-cover rounded-2xl p-2"
                   src={MENU_IMG_API + item.card.info.imageId}
                   alt={item.card.info.name}
                 />
-                {isItemInCart(item.card.info.id) ? (
-                  <QuantityButton
-                    itemId={item.card.info.id}
-                    quantity={
-                      cartItems.find(
-                        (cartItem) =>
-                          cartItem.card.info.id === item.card.info.id
-                      )?.quantity || 0
-                    }
-                    onDecrease={handleDecreaseQuantity}
-                    onIncrease={handleIncreaseQuantity}
-                  />
-                ) : (
-                  <button
-                    className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-[1px] border-green-400 px-4 py-1 rounded-md bg-white text-xs text-green-400 font-bold active:bg-green-200 active:text-green-700 hover:bg-slate-100"
-                    onClick={() => handleAddToCart(item)}
-                  >
-                    ADD+
-                  </button>
-                )}
-              </div>
-            ) : (
-              <div className=""></div>
-            )}
+              ) : (
+                <NoImage />
+              )}
+
+              {isItemInCart(item.card.info.id) ? (
+                <QuantityButton
+                  itemId={item.card.info.id}
+                  quantity={
+                    cartItems.find(
+                      (cartItem) => cartItem.card.info.id === item.card.info.id
+                    )?.quantity || 0
+                  }
+                  onDecrease={handleDecreaseQuantity}
+                  onIncrease={handleIncreaseQuantity}
+                />
+              ) : (
+                <button
+                  className="absolute bottom-0 left-1/2 transform -translate-x-1/2 border-[1px] border-green-400 px-4 py-1 rounded-md bg-white text-xs text-green-400 font-bold active:bg-green-200 active:text-green-700 hover:bg-slate-100"
+                  onClick={() => handleAddToCart(item)}
+                >
+                  ADD+
+                </button>
+              )}
+            </div>
           </div>
         </div>
       ))}
