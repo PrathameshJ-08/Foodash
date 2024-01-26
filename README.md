@@ -41,7 +41,7 @@
 
 ---
 
-## Getting Started
+## 📜 Getting Started
 
 To run Foodash locally, follow these steps:
 
@@ -63,9 +63,11 @@ npm install
 npm start
 ```
 
-Visit [Foodash](https://foodash.vercel.app/) to see the application in action.
+---
 
-Feel free to explore the codebase, contribute, and enhance the Foodash experience!
+### 📌 Visit [Foodash](https://foodash.vercel.app/) to see the application in action.
+
+### Feel free to explore the codebase, contribute, and enhance the Foodash experience!
 
 ---
 
@@ -105,9 +107,7 @@ Feel free to explore the codebase, contribute, and enhance the Foodash experienc
 
 ---
 
-### 💻Proxy-server
-
----
+## 💻Proxy-server
 
 A Node.js application is set up to act as a proxy for Swiggy API requests.
 The application utilizes Express, a popular web application framework for Node.js
@@ -116,6 +116,4 @@ The application utilizes Express, a popular web application framework for Node.j
 
 ---
 
-**Foodash - Bringing Flavor to Your Doorstep!**
-
----
+## <p align="center">**Foodash - Bringing Flavor to Your Doorstep!**</p>
