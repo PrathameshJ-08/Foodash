@@ -92,31 +92,25 @@ Effortlessly manage your cart with features like item quantity adjustments, easy
   <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (3).png" alt="Screenshot 2" style="width: 30%;">
   </div>
-
-  <!-- Row 2 -->
-  <div style="flex: 1;">
+ <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (5).png" alt="Screenshot 4" style="width: 30%;">
   </div>
   <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 3" style="width: 30%;">
   </div>
 
-  <!-- Row 3 -->
   <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (6).png" alt="Screenshot 5" style="width: 30%;">
   </div>
   <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (7).png" alt="Screenshot 6" style="width: 30%;">
   </div>
-
-  <!-- Row 4 -->
   <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (8).png" alt="Screenshot 8" style="width: 30%;">
   </div>
   <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (1).png" alt="Screenshot 7" style="width: 30%;">
   </div>
-
 </div>
 
 ---
