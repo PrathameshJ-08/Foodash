@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://foodash.vercel.app/" target="_blank">
-    <img src=".0_MISC/SCREENSHOTS/FoodashLogo.png" alt="Foodash Logo" height="100rem">
+    <img src="./screenshots/FoodashLogo.png" alt="Foodash Logo" height="100rem">
   </a>
 </div>
 
@@ -27,9 +27,9 @@
 >
 > Food Dash provides users with up-to-the-minute information on menus, availability, and promotions, ensuring accurate and reliable details for informed dining choices.
 
-> ### 🌐 Geolocation Integration with `useGeolocation` Hook
+> ### 🌐 Location-Aware Restaurant Suggestions
 >
-> Dynamically fetches the user's location and provides detailed information, including latitude, longitude, and address details to display restaurants near the user.
+> Uses geolocation to suggest nearby restaurants based on the user's current location. This ensures that users discover new and exciting dining options close to them.
 
 > ### 🔐 Firebase Authentication
 >
@@ -61,7 +61,11 @@
 
 > ### 📜 Detailed Restaurant Information
 >
-> Get comprehensive details about each restaurant, including menus, offers, and more, providing you with the information needed to make informed choices.
+> Explore comprehensive menus with real-time updates for each restaurant. Get detailed information about dishes, prices, and special offers.
+
+> ### 🛒 Seamless Cart Management
+
+Effortlessly manage your cart with features like item quantity adjustments, easy removal, and a clear overview of the total bill.
 
 > ### ✨ Shimmer UI
 >
@@ -83,45 +87,65 @@
 
   <!-- Row 1 -->
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(386).png" alt="Screenshot 1" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 1" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(387).png" alt="Screenshot 2" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 2" style="width: 100%;">
   </div>
 
   <!-- Row 2 -->
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(389).png" alt="Screenshot 4" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 4" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(388).png" alt="Screenshot 3" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 3" style="width: 100%;">
   </div>
 
   <!-- Row 3 -->
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(390).png" alt="Screenshot 5" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 5" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(391).png" alt="Screenshot 6" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 6" style="width: 100%;">
   </div>
 
   <!-- Row 4 -->
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(392).png" alt="Screenshot 8" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 8" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(393).png" alt="Screenshot 7" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 7" style="width: 100%;">
   </div>
 
 </div>
+
+---
 
 ### Mobile View
 
+---
+
 <div style="display: flex; overflow-x: auto; gap: 10px;">
-  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.54%20AM.jpeg" alt="Mobile Screenshot 8" style="max-width: 100%; height: 300px">
-  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.53%20AM.jpeg" alt="Mobile Screenshot 6" style="max-width: 100%; height: 300px">
-  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.51%20AM.jpeg" alt="Mobile Screenshot 1" style="max-width: 100%; height: 300px">
-  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.49%20AM.jpeg" alt="Mobile Screenshot 3" style="max-width: 100%; height: 300px">
-  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.48%20AM.jpeg" alt="Mobile Screenshot 2" style="max-width: 100%; height: 300px">
-  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.46%20AM.jpeg" alt="Mobile Screenshot 5" style="max-width: 100%; height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (1).jpeg" alt="Mobile Screenshot 8" style="max-width: 100%; height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (2).jpeg" alt="Mobile Screenshot 6" style="max-width: 100%; height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (3).jpeg" alt="Mobile Screenshot 1" style="max-width: 100%; height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (4).jpeg" alt="Mobile Screenshot 3" style="max-width: 100%; height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (5).jpeg" alt="Mobile Screenshot 2" style="max-width: 100%; height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (6).jpeg" alt="Mobile Screenshot 5" style="max-width: 100%; height: 300px">
 </div>
+---
+## Getting Started
+
+To run Foodash locally, follow these steps:
+
+1. Clone the repository: `git clone [repository-url]`
+2. Install dependencies: `npm install`
+3. Start the development server: `npm start`
+
+Visit [Foodash Live Demo](#) to see the application in action.
+
+Feel free to explore the codebase, contribute, and enhance the Foodash experience!
+
+---
+
+**Foodash - Bringing Flavor to Your Doorstep!**
