@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://foodash.vercel.app/" target="_blank">
-    <img src="../SCREENSHOTS/FoodashLogo.png" alt="Foodash Logo" height="100rem">
+    <img src=".0_MISC/SCREENSHOTS/FoodashLogo.png" alt="Foodash Logo" height="100rem">
   </a>
 </div>
 
@@ -83,34 +83,34 @@
 
   <!-- Row 1 -->
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(386).png" alt="Screenshot 1" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(386).png" alt="Screenshot 1" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(387).png" alt="Screenshot 2" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(387).png" alt="Screenshot 2" style="width: 100%;">
   </div>
 
   <!-- Row 2 -->
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(389).png" alt="Screenshot 4" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(389).png" alt="Screenshot 4" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(388).png" alt="Screenshot 3" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(388).png" alt="Screenshot 3" style="width: 100%;">
   </div>
 
   <!-- Row 3 -->
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(390).png" alt="Screenshot 5" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(390).png" alt="Screenshot 5" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(391).png" alt="Screenshot 6" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(391).png" alt="Screenshot 6" style="width: 100%;">
   </div>
 
   <!-- Row 4 -->
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(392).png" alt="Screenshot 8" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(392).png" alt="Screenshot 8" style="width: 100%;">
   </div>
   <div style="flex: 1;">
-    <img src="../SCREENSHOTS/Screenshot%20(393).png" alt="Screenshot 7" style="width: 100%;">
+    <img src=".0_MISC/SCREENSHOTS/Screenshot%20(393).png" alt="Screenshot 7" style="width: 100%;">
   </div>
 
 </div>
@@ -118,10 +118,10 @@
 ### Mobile View
 
 <div style="display: flex; overflow-x: auto; gap: 10px;">
-  <img src="../SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.54%20AM.jpeg" alt="Mobile Screenshot 8" style="max-width: 100%; height: 300px">
-  <img src="../SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.53%20AM.jpeg" alt="Mobile Screenshot 6" style="max-width: 100%; height: 300px">
-  <img src="../SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.51%20AM.jpeg" alt="Mobile Screenshot 1" style="max-width: 100%; height: 300px">
-  <img src="../SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.49%20AM.jpeg" alt="Mobile Screenshot 3" style="max-width: 100%; height: 300px">
-  <img src="../SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.48%20AM.jpeg" alt="Mobile Screenshot 2" style="max-width: 100%; height: 300px">
-  <img src="../SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.46%20AM.jpeg" alt="Mobile Screenshot 5" style="max-width: 100%; height: 300px">
+  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.54%20AM.jpeg" alt="Mobile Screenshot 8" style="max-width: 100%; height: 300px">
+  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.53%20AM.jpeg" alt="Mobile Screenshot 6" style="max-width: 100%; height: 300px">
+  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.51%20AM.jpeg" alt="Mobile Screenshot 1" style="max-width: 100%; height: 300px">
+  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.49%20AM.jpeg" alt="Mobile Screenshot 3" style="max-width: 100%; height: 300px">
+  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.48%20AM.jpeg" alt="Mobile Screenshot 2" style="max-width: 100%; height: 300px">
+  <img src=".0_MISC/SCREENSHOTS/Mobile/WhatsApp%20Image%202024-01-26%20at%2010.22.46%20AM.jpeg" alt="Mobile Screenshot 5" style="max-width: 100%; height: 300px">
 </div>
