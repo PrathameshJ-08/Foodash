@@ -83,7 +83,7 @@ Effortlessly manage your cart with features like item quantity adjustments, easy
 
 # 📷 Screenshots
 
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;">
+<div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px;">
 
   <!-- Row 1 -->
   <div style="flex: 1;">
