@@ -83,20 +83,33 @@ Effortlessly manage your cart with features like item quantity adjustments, easy
 
 # 📷 Screenshots
 
-<table>
-  <tr>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(2).png" alt="Screenshot 1" style="width: 80%;"></td>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(3).png" alt="Screenshot 2" style="width: 80%;"></td>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(5).png" alt="Screenshot 4" style="width: 80%;"></td>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(4).png" alt="Screenshot 3" style="width: 80%;"></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(6).png" alt="Screenshot 5" style="width: 80%;"></td>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(7).png" alt="Screenshot 6" style="width: 80%;"></td>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(8).png" alt="Screenshot 8" style="width: 80%;"></td>
-    <td align="center"><img src="screenshots/Desktop_Screenshot%20(1).png" alt="Screenshot 7" style="width: 80%;"></td>
-  </tr>
-</table>
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+  <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (2).png" alt="Screenshot 1" style="width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (3).png" alt="Screenshot 2" style="width: 100%;">
+  </div>
+ <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (5).png" alt="Screenshot 4" style="width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 3" style="width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (6).png" alt="Screenshot 5" style="width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (7).png" alt="Screenshot 6" style="width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (8).png" alt="Screenshot 8" style="width: 100%;">
+  </div>
+  <div style="flex: 1;">
+    <img src="screenshots/Desktop_Screenshot (1).png" alt="Screenshot 7" style="width: 100%;">
+  </div>
+</div>
+
 ---
 
 ### Mobile View
@@ -104,12 +117,12 @@ Effortlessly manage your cart with features like item quantity adjustments, easy
 ---
 
 <div style="display: flex; overflow-x: auto; gap: 10px;">
-  <img src="screenshots/Mobile/Mobile_Screenshot (7).jpeg" alt="Mobile Screenshot 8" style="max-width: 30%; height: 300px">
-  <img src="screenshots/Mobile/Mobile_Screenshot (6).jpeg" alt="Mobile Screenshot 6" style="max-width: 30%; height: 300px">
-  <img src="screenshots/Mobile/Mobile_Screenshot (4).jpeg" alt="Mobile Screenshot 1" style="max-width: 30%; height: 300px">
-  <img src="screenshots/Mobile/Mobile_Screenshot (3).jpeg" alt="Mobile Screenshot 3" style="max-width: 30%; height: 300px">
-  <img src="screenshots/Mobile/Mobile_Screenshot (2).jpeg" alt="Mobile Screenshot 2" style="max-width: 30%; height: 300px">
-  <img src="screenshots/Mobile/Mobile_Screenshot (8).jpeg" alt="Mobile Screenshot 5" style="max-width: 30%; height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (7).jpeg" alt="Mobile Screenshot 8" style="height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (6).jpeg" alt="Mobile Screenshot 6" style="height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (4).jpeg" alt="Mobile Screenshot 1" style="height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (3).jpeg" alt="Mobile Screenshot 3" style="height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (2).jpeg" alt="Mobile Screenshot 2" style="height: 300px">
+  <img src="screenshots/Mobile/Mobile_Screenshot (8).jpeg" alt="Mobile Screenshot 5" style="height: 300px">
 </div>
 ---
 ## Getting Started
