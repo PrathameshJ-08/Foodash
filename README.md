@@ -1,6 +1,6 @@
 <div align="center">
   <a href="screenshots/Desktop_Screenshot (4).png" target="_blank">
-    <img src="./screenshots/FoodashLogo.png" alt="Foodash Logo" height="100rem">
+    <img src="./screenshots/FoodashLogo.png" alt="Foodash Logo" height="autorem">
   </a>
 </div>
 
@@ -85,28 +85,28 @@ Effortlessly manage your cart with features like item quantity adjustments, easy
 
 <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (2).png" alt="Screenshot 1" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (2).png" alt="Screenshot 1" style="width: auto%;">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (3).png" alt="Screenshot 2" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (3).png" alt="Screenshot 2" style="width: auto%;">
   </div>
  <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (5).png" alt="Screenshot 4" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (5).png" alt="Screenshot 4" style="width: auto%;">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 3" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 3" style="width: auto%;">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (6).png" alt="Screenshot 5" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (6).png" alt="Screenshot 5" style="width: auto%;">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (7).png" alt="Screenshot 6" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (7).png" alt="Screenshot 6" style="width: auto%;">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (8).png" alt="Screenshot 8" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (8).png" alt="Screenshot 8" style="width: auto%;">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (1).png" alt="Screenshot 7" style="width: 100%;">
+    <img src="screenshots/Desktop_Screenshot (1).png" alt="Screenshot 7" style="width: auto%;">
   </div>
 </div>
 
