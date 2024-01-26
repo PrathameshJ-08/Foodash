@@ -87,34 +87,34 @@ Effortlessly manage your cart with features like item quantity adjustments, easy
 
   <!-- Row 1 -->
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (2).png" alt="Screenshot 1" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (2).png" alt="Screenshot 1" style="width:  300px">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (3).png" alt="Screenshot 2" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (3).png" alt="Screenshot 2" style="width: 300px">
   </div>
 
   <!-- Row 2 -->
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (5).png" alt="Screenshot 4" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (5).png" alt="Screenshot 4" style="width: 300px">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 3" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (4).png" alt="Screenshot 3" style="width: 300px">
   </div>
 
   <!-- Row 3 -->
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (6).png" alt="Screenshot 5" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (6).png" alt="Screenshot 5" style="width: 300px">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (7).png" alt="Screenshot 6" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (7).png" alt="Screenshot 6" style="width: 300px">
   </div>
 
   <!-- Row 4 -->
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (8).png" alt="Screenshot 8" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (8).png" alt="Screenshot 8" style="width: 300px">
   </div>
   <div style="flex: 1;">
-    <img src="screenshots/Desktop_Screenshot (1).png" alt="Screenshot 7" style="max-width: auto">
+    <img src="screenshots/Desktop_Screenshot (1).png" alt="Screenshot 7" style="width: 300px">
   </div>
 
 </div>
