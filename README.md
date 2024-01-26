@@ -83,7 +83,7 @@ Effortlessly manage your cart with features like item quantity adjustments, easy
 
 # 📷 Screenshots
 
-<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+<div style="display: flex; overflow-x: auto; gap: 10px;">
   <div style="flex: 1;">
     <img src="screenshots/Desktop_Screenshot (2).png" alt="Screenshot 1" style="width: auto%;">
   </div>
