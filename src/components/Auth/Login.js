@@ -18,8 +18,8 @@ const Login = ({
 }) => {
   const { user, updateUser } = useUserContext();
   const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("abc@gmail.com");
+  const [password, setPassword] = useState("abc@gmail.com");
   const [loginSuccess, setLoginSuccess] = useState(false);
   const [loginError, setLoginError] = useState(null);
 
