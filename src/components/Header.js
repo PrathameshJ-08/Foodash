@@ -93,9 +93,6 @@ const Header = () => {
               <Link to="/rlist">Home</Link>
             </li>
             <li className="px-2 sm:px-4 hover:text-emerald-400 font-bold">
-              <Link to="/about">About</Link>
-            </li>
-            <li className="px-2 sm:px-4 hover:text-emerald-400 font-bold">
               <Link to="/contact">Contact </Link>
             </li>
             <li className="px-2 sm:px-4 hover:text-emerald-400 font-bold">
