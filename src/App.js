@@ -12,7 +12,6 @@ import Header from "./components/Header";
 import Landing from "./components/LandingPage/Landing";
 import RestaurantList from "./components/Restaurant/RestaurantList";
 import Contact from "./components/Contact";
-import About from "./components/About";
 import Footer from "./components/Footer";
 
 import ResMenuShimmer from "./assets/Shimmer/ResMenuShimmer";
@@ -86,10 +85,6 @@ const appRouter = createBrowserRouter([
       {
         path: "/rlist",
         element: <RestaurantList />,
-      },
-      {
-        path: "/About",
-        element: <About />,
       },
       {
         path: "/contact",
