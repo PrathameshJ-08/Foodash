@@ -65,15 +65,13 @@ const Landing = () => {
         >
           <div className="xl:w-1/2">
             <section className="flex-1 flex flex-col sm:p-16 px-7 py-16">
-              <div className="sm:flex items-center px-10 md:px-0">
-                <div className="-mb-12 md:mb-0 -ml-8 md:ml-0">
-                  <Logo width="w-16 sm:w-24" ml="ml-0" />
-                </div>
-                <h1 className="text-3xl sm:text-5xl font-extrabold text-teal-500 ml-12 md:ml-1">
+              <div className="flex items-center">
+                <Logo width="w-8 sm:w-24" ml="ml-0" />
+                <h1 className="text-xl sm:text-4xl font-extrabold text-teal-500">
                   FOODASH
                 </h1>
 
-                <div className="ml-auto flex xl:items-center items-end sm:space-x-4 mt-8 md:mt-0">
+                <div className="ml-auto flex xl:items-center items-end sm:space-x-4 ">
                   <button
                     className="px-6 py-2 rounded font-bold sm:text-base"
                     onClick={handleLoginClick}
@@ -107,7 +105,7 @@ const Landing = () => {
                   )}
                 </div>
               </div>
-              <div className="slider-container mt-4 md:mt-16">
+              <div className="slider-container mt-16">
                 <h1 className="slide-in text-3xl sm:text-5xl font-bold mt-16 ">
                   {headlines[headlinesIndex]}
                 </h1>
