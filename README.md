@@ -1,6 +1,6 @@
 <div align="center">
 <a href="https://foodash.vercel.app/" target="_blank">
-<img src="./screenshots/FoodashLogo.png" alt="Foodash Logo" height="autorem">
+<img src="./screenshots/FoodashLogo1.png" alt="Foodash Logo" height="autorem">
 </a>
 
 </div>
