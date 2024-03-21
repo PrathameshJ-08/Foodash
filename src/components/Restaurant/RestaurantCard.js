@@ -19,7 +19,7 @@ const RestaurantCard = (props) => {
 
   return (
     <div
-      className={`xl:h-auto relative transition-all duration-300 ease-in-out hover:cursor-pointer hover:transform hover:scale-105 hover:bg-gray-200 sm:hover:bg-stone-50 mb-2 xl:mb-0 grid sm:block grid-cols-6 sm:grid-cols-none rounded-xl border-y-2 border-dashed border-teal-600 sm:border-none   ${
+      className={`xl:h-auto relative transition-all duration-300 ease-in-out hover:cursor-pointer hover:transform md:hover:scale-105 hover:scale-95 hover:bg-gray-200 sm:hover:bg-stone-50 mb-2 xl:mb-0 grid sm:block grid-cols-6 sm:grid-cols-none rounded-xl border-y-2 border-dashed border-teal-600 sm:border-none   ${
         isClosed ? "grayscale" : ""
       }`}
     >
