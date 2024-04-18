@@ -25,7 +25,7 @@ const MenuList = () => {
 
   if (resInfo === null) return <ResMenuShimmer />;
   const offer =
-    resInfo.data.cards[1].card.card.gridElements.infoWithStyle.offers;
+    resInfo.data.cards[3].card.card.gridElements.infoWithStyle.offers;
 
   const {
     id,
