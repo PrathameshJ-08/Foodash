@@ -27,6 +27,8 @@ const MenuList = () => {
   const offer =
     resInfo.data.cards[3].card.card.gridElements.infoWithStyle.offers;
 
+  console.log(resInfo);
+
   const {
     id,
     name,
@@ -38,10 +40,10 @@ const MenuList = () => {
     totalRatingsString,
     areaName,
     locality,
-  } = resInfo?.data?.cards[0]?.card?.card?.info;
+  } = resInfo?.data?.cards[2]?.card?.card?.info;
 
   const regularCards =
-    resInfo?.data?.cards?.[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    resInfo?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
   const categories = regularCards?.filter(
     (c) =>
@@ -119,7 +121,7 @@ const MenuList = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="flex sm:flex-row flex-col items-center text-center sm:text-start sm:items-stretch bg-gradient-to-tr from-slate-950 via-cyan-800 to-teal-500 xl:mb-0 sm:mb-[-1.5rem] p-5 xl:p-10 py-16 -mt-10 md:mt-0">
+        <div className="flex sm:flex-row flex-col items-center text-center sm:text-start sm:items-stretch bg-gradient-to-tr from-slate-950 via-cyan-800 to-teal-500 xl:mb-0 sm:mb-[-1.5rem] p-5 xl:p-10 py-16 -mt-10 md:mt-0 h-[322px]">
           <img
             className="rounded-2xl xl:mb-0  xl:flex-shrink-0 w-96 sm:self-center md:self-start"
             src={img}
