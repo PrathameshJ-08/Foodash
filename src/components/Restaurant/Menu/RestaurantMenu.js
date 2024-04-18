@@ -116,7 +116,7 @@ const MenuList = () => {
 
   const img = RESTAURANT_IMG_URL + cloudinaryImageId;
 
-  const rinfo = resInfo?.data?.cards[0]?.card?.card?.info;
+  const rinfo = resInfo?.data?.cards[2]?.card?.card?.info;
 
   return (
     <>

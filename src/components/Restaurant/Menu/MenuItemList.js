@@ -43,6 +43,8 @@ const MenuItemList = ({ items, rinfo }) => {
     dispatch(setResDetails(rinfo));
   }, []);
 
+  console.log(rinfo);
+
   const handleAddToCart = (item) => {
     if (!currentCartRestaurant) {
       dispatch(setCartRestaurant(rinfo.id));
