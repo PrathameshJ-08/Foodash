@@ -8,7 +8,7 @@ import NestedCategory from "./NestedCategory";
 import Cart from "../Cart";
 import Offers from "./Offers";
 
-import { RESTAURANT_IMG_URL } from "../../../utils/constants";
+import { MENU_IMG_API, RESTAURANT_IMG_URL } from "../../../utils/constants";
 import ResMenuShimmer from "../../../assets/Shimmer/ResMenuShimmer";
 import { PiCookingPotBold } from "react-icons/pi";
 import { RxCross2 } from "react-icons/rx";
@@ -27,8 +27,6 @@ const MenuList = () => {
   const offer =
     resInfo.data.cards[3].card.card.gridElements.infoWithStyle.offers;
 
-  console.log(resInfo);
-
   const {
     id,
     name,
@@ -41,6 +39,17 @@ const MenuList = () => {
     areaName,
     locality,
   } = resInfo?.data?.cards[2]?.card?.card?.info;
+
+  const RestaurantFooter =
+    resInfo?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR.cards;
+
+  const RestaurantLiscence = RestaurantFooter.filter(
+    (c) =>
+      c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.RestaurantAddress" ||
+      c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.RestaurantLicenseInfo"
+  );
 
   const regularCards =
     resInfo?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
@@ -221,6 +230,32 @@ const MenuList = () => {
         >
           <FaArrowUp />
         </button>
+      </div>
+
+      <div className="flex justify-center text-xs lg:text-base">
+        <div className="bg-slate-200 w-10/12 lg:w-1/2  lg:h-52 mt-16 mb-8 justify-center items-center rounded-2xl p-5 shadow-lg">
+          <div className="flex justify-center items-center h-16 p-5 border-b-2 border-slate-400 ">
+            <img
+              className="w-16"
+              src={`${MENU_IMG_API}${RestaurantLiscence[0].card.card.imageId}`}
+            />
+            <span className="mt-1 pl-6 text-gray-400">
+              {RestaurantLiscence[0].card.card.text}
+            </span>
+          </div>
+          <div className="flex flex-col justify-center  h-16 p-5 mt-8 pb-10">
+            <p className="text-gray-400 font-bold">
+              {RestaurantLiscence[1].card.card.name}
+            </p>
+            <p className="text-gray-400">
+              (Outlet: {RestaurantLiscence[1].card.card.area})
+            </p>
+            <p className="text-gray-400 pt-1">
+              <i className="fas fa-map-marker-alt text-gray-400 mr-2" />
+              {RestaurantLiscence[1].card.card.completeAddress}
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

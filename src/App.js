@@ -1,35 +1,34 @@
 import React, { Suspense, lazy, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import {
-  RouterProvider,
-  createBrowserRouter,
-  Outlet,
+  BrowserRouter as Router,
+  Route,
+  Routes,
   useLocation,
 } from "react-router-dom";
 import { Provider } from "react-redux";
 
-import Header from "./components/Header";
-import Landing from "./components/LandingPage/Landing";
-import RestaurantList from "./components/Restaurant/RestaurantList";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Header from "./components/Header.js";
+import Landing from "./components/LandingPage/Landing.js";
+import RestaurantList from "./components/Restaurant/RestaurantList.js";
+import Contact from "./components/Contact.js";
+import Footer from "./components/Footer.js";
 
-import ResMenuShimmer from "./assets/Shimmer/ResMenuShimmer";
-import appStore from "./utils/appStore";
-import CartLayout from "./components/Restaurant/CartLayout";
-import EmptyCart from "./assets/EmptyCart";
-import Error from "./assets/Error";
-import useOnlineStatus from "./utils/hooks/useOnlineStatus";
-import Offline from "./assets/Offline";
+import ResMenuShimmer from "./assets/Shimmer/ResMenuShimmer.js";
+import appStore from "./utils/appStore.js";
+import CartLayout from "./components/Restaurant/CartLayout.js";
+import EmptyCart from "./assets/EmptyCart.js";
+import useOnlineStatus from "./utils/hooks/useOnlineStatus.js";
+import Offline from "./assets/Offline.js";
 
-import "./index.css";
-
-import { UserProvider } from "./utils/userContext";
+import { UserProvider } from "./utils/userContext.js";
 import { LoadingImg } from "./assets/images.js";
+import "./index.css";
 
 const RestaurantMenu = lazy(() =>
   import("./components/Restaurant/Menu/RestaurantMenu.js")
 );
+
 const AppLayout = () => {
   const location = useLocation();
   const currentPath = location.pathname;
@@ -48,8 +47,6 @@ const AppLayout = () => {
     fetchData();
   }, []);
 
-  useEffect(() => {}, [location]);
-
   const onlineStatus = useOnlineStatus();
   if (onlineStatus === false) return <Offline />;
 
@@ -57,15 +54,29 @@ const AppLayout = () => {
     <UserProvider>
       <Provider store={appStore}>
         {loading ? (
-          <div className=" bg-slate-950  h-screen overflow-hidden flex items-center justify-center">
-            <div className="animate-pulse ">
+          <div className="bg-slate-950 h-screen overflow-hidden flex items-center justify-center">
+            <div className="animate-pulse">
               <LoadingImg width="w-[60rem]" />
             </div>
           </div>
         ) : (
           <div>
             {renderHeader}
-            <Outlet />
+            <Routes>
+              <Route path="/" element={<Landing />} />
+              <Route path="/rlist" element={<RestaurantList />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/cart" element={<CartLayout />} />
+              <Route path="/emptycart" element={<EmptyCart />} />
+              <Route
+                path="/rlist/restaurants/:resId"
+                element={
+                  <Suspense fallback={<ResMenuShimmer />}>
+                    <RestaurantMenu />
+                  </Suspense>
+                }
+              />
+            </Routes>
             {renderFooter}
           </div>
         )}
@@ -73,44 +84,10 @@ const AppLayout = () => {
     </UserProvider>
   );
 };
-const appRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppLayout />,
-    children: [
-      {
-        path: "/",
-        element: <Landing />,
-      },
-      {
-        path: "/rlist",
-        element: <RestaurantList />,
-      },
-      {
-        path: "/contact",
-        element: <Contact />,
-      },
-      {
-        path: "/cart",
-        element: <CartLayout />,
-      },
-      {
-        path: "/emptycart",
-        element: <EmptyCart />,
-      },
-
-      {
-        path: "/rlist/restaurants/:resId",
-        element: (
-          <Suspense fallback={<ResMenuShimmer />}>
-            <RestaurantMenu />,
-          </Suspense>
-        ),
-      },
-    ],
-    errorElement: <Error />,
-  },
-]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={appRouter} />);
+root.render(
+  <Router>
+    <AppLayout />
+  </Router>
+);
