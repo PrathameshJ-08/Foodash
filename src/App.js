@@ -24,6 +24,7 @@ import Offline from "./assets/Offline.js";
 import { UserProvider } from "./utils/userContext.js";
 import { LoadingImg } from "./assets/images.js";
 import "./index.css";
+import PrivateRoute from "./utils/PrivateRoute.js";
 
 const RestaurantMenu = lazy(() =>
   import("./components/Restaurant/Menu/RestaurantMenu.js")
@@ -64,15 +65,28 @@ const AppLayout = () => {
             {renderHeader}
             <Routes>
               <Route path="/" element={<Landing />} />
-              <Route path="/rlist" element={<RestaurantList />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/cart" element={<CartLayout />} />
-              <Route path="/emptycart" element={<EmptyCart />} />
+
+              <Route
+                path="/rlist"
+                element={<PrivateRoute component={RestaurantList} />}
+              />
+              <Route
+                path="/contact"
+                element={<PrivateRoute component={Contact} />}
+              />
+              <Route
+                path="/cart"
+                element={<PrivateRoute component={CartLayout} />}
+              />
+              <Route
+                path="/emptycart"
+                element={<PrivateRoute component={EmptyCart} />}
+              />
               <Route
                 path="/rlist/restaurants/:resId"
                 element={
                   <Suspense fallback={<ResMenuShimmer />}>
-                    <RestaurantMenu />
+                    <PrivateRoute component={RestaurantMenu} />
                   </Suspense>
                 }
               />
