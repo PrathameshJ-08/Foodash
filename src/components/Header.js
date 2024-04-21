@@ -14,12 +14,14 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import LogoutOutlinedIcon from "@mui/icons-material/LogoutOutlined";
 
 const MobileHeader = ({ handleSidebarClose }) => {
+  const { updateUser } = useUserContext();
   const cartItems = useSelector((store) => store.cart.items) || [];
   const totalQuantity = cartItems.reduce(
     (total, item) => total + item.quantity,
     0
   );
 
+  const navigate = useNavigate();
   const handleLogout = () => {
     updateUser(null);
     navigate("/");
@@ -108,7 +110,7 @@ const Header = () => {
     (total, item) => total + item.quantity,
     0
   );
-
+  const navigate = useNavigate();
   const handleLogout = () => {
     updateUser(null);
     navigate("/");

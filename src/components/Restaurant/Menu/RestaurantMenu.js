@@ -27,6 +27,8 @@ const MenuList = () => {
   const offer =
     resInfo.data.cards[3].card.card.gridElements.infoWithStyle.offers;
 
+  // console.log(resInfo);
+
   const {
     id,
     name,
@@ -43,14 +45,6 @@ const MenuList = () => {
   const RestaurantFooter =
     resInfo?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR.cards;
 
-  const RestaurantLiscence = RestaurantFooter.filter(
-    (c) =>
-      c?.card?.card?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.RestaurantAddress" ||
-      c?.card?.card?.["@type"] ===
-        "type.googleapis.com/swiggy.presentation.food.v2.RestaurantLicenseInfo"
-  );
-
   const regularCards =
     resInfo?.data?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
 
@@ -58,6 +52,14 @@ const MenuList = () => {
     (c) =>
       c?.card?.card?.["@type"] ===
       "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  );
+
+  const RestaurantLiscence = RestaurantFooter.filter(
+    (c) =>
+      c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.RestaurantAddress" ||
+      c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.RestaurantLicenseInfo"
   );
 
   const nestedCategories = regularCards?.filter(
@@ -169,13 +171,13 @@ const MenuList = () => {
         </div>
 
         {hasItem() && (
-          <span className="z-50 fixed text-white font-extrabold text-xs bg-amber-600 rounded-full w-4 text-center right-14 bottom-10">
+          <span className="z-40 fixed text-white font-extrabold text-xs bg-amber-600 rounded-full w-4 text-center right-14 bottom-10">
             {totalQuantity}
           </span>
         )}
 
         <button
-          className={`z-40 rounded-full fixed p-2 text-white bg-teal-500 bottom-5 right-6 text-2xl 
+          className={`z-30 rounded-full fixed p-2 text-white bg-teal-500 bottom-5 right-6 text-2xl 
         }`}
           onClick={handleCartToggle}
         >
@@ -183,7 +185,7 @@ const MenuList = () => {
         </button>
         {showCart && (
           <>
-            <div className="fixed right-5 bottom-5 shadow-lg z-30">
+            <div className="fixed right-5 bottom-5 shadow-lg z-20">
               <Cart from={"menu"} />
             </div>
           </>
