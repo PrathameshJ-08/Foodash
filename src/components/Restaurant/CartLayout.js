@@ -34,15 +34,15 @@ const CheckoutPage = () => {
         <OrderPage />
       ) : (
         <>
-          <div className="flex flex-col-reverse lg:flex-row bg-teal-100 md:mt-24 -mt-8">
+          <div className="flex flex-col-reverse lg:flex-row bg-teal-100 md:mt-24 -mt-8 overflow-y-auto pl-1">
             <div className="lg:w-8/12 pt-8 text-md sm:text-xl">
-              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5  mt-5 shadow-lg flex overflow-hidden items-center">
+              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5  mt-5 shadow-lg flex  items-center">
                 <div className="text-teal-500 p-5">
                   <AccountCircleIcon />
                 </div>
                 <span>{user.name ? `${user.name}!` : "Guest"}</span>
               </div>
-              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5 mt-5 shadow-lg flex overflow-hidden items-center">
+              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5 mt-5 shadow-lg flex  items-center">
                 <div className="text-teal-500 p-5">
                   <LocationOnIcon />
                 </div>
@@ -54,7 +54,7 @@ const CheckoutPage = () => {
                   {location?.address?.state}
                 </span>
               </div>
-              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5 mt-5 shadow-lg flex overflow-hidden items-center">
+              <div className="bg-zinc-50 rounded-sm md:mx-20 mx-5 mt-5 shadow-lg flex items-center">
                 <div className="text-teal-500 p-5">
                   <AccountBalanceWalletIcon />
                 </div>

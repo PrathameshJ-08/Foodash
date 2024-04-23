@@ -15,7 +15,7 @@ import WifiIcon from "@mui/icons-material/Wifi";
 import WifiOffIcon from "@mui/icons-material/WifiOff";
 
 const MobileHeader = ({ handleLogout }) => {
-  const [activeTab, setActiveTab] = useState("");
+  const [activeTab, setActiveTab] = useState("home");
 
   const cartItems = useSelector((store) => store.cart.items) || [];
   const totalQuantity = cartItems.reduce(
@@ -28,7 +28,7 @@ const MobileHeader = ({ handleLogout }) => {
   };
 
   return (
-    <div className="z-50 fixed bottom-0 w-full bg-slate-100 flex justify-around items-center py-2 lg:hidden rounded-t-2xl border-t-2 border-slate-400 text-xs ">
+    <div className="z-50 fixed bottom-0 w-full bg-slate-200 flex justify-around items-center py-2 lg:hidden rounded-t-3xl border-t-2  text-xs ">
       <Link
         to="/rlist"
         onClick={() => handleTabClick("home")}
@@ -65,7 +65,7 @@ const MobileHeader = ({ handleLogout }) => {
         <ContactSupportOutlinedIcon style={{ fontSize: "1.5rem" }} />
         <div className="-mt-1">Contact</div>
       </Link>
-      <button onClick={handleLogout} className="text-center">
+      <button onClick={handleLogout} className="text-center text-gray-500">
         <LogoutOutlinedIcon style={{ fontSize: "1.5rem" }} />
         <div className="-mt-1">Logout </div>
       </button>
