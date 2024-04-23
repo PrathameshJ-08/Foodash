@@ -28,7 +28,7 @@ const MobileHeader = ({ handleLogout }) => {
   };
 
   return (
-    <div className="z-50 fixed bottom-0 w-full bg-slate-100 flex justify-around items-center py-2 lg:hidden rounded-t-2xl border-t-2 border-slate-400">
+    <div className="z-50 fixed bottom-0 w-full bg-slate-100 flex justify-around items-center py-2 lg:hidden rounded-t-2xl border-t-2 border-slate-400 text-xs">
       <Link
         to="/rlist"
         onClick={() => handleTabClick("home")}
@@ -36,7 +36,7 @@ const MobileHeader = ({ handleLogout }) => {
           activeTab === "home" ? "text-emerald-600" : "text-gray-500"
         }`}
       >
-        <HomeOutlinedIcon style={{ fontSize: "2rem" }} />
+        <HomeOutlinedIcon style={{ fontSize: "1.2rem" }} />
         <div className="-mt-2">Home</div>
       </Link>
       <Link
@@ -46,7 +46,7 @@ const MobileHeader = ({ handleLogout }) => {
           activeTab === "cart" ? "text-emerald-600" : "text-gray-500"
         }`}
       >
-        <ShoppingCartOutlinedIcon style={{ fontSize: "2rem" }} />
+        <ShoppingCartOutlinedIcon style={{ fontSize: "1.2rem" }} />
         <div className="-mt-2">Cart</div>
         {cartItems.length > 0 && (
           <span className="absolute text-green-600 bg-green-300 rounded-full px-[0.3rem] -mt-12 ml-1 text-xs opacity-90">
@@ -62,11 +62,11 @@ const MobileHeader = ({ handleLogout }) => {
           activeTab === "contact" ? "text-emerald-600" : "text-gray-500"
         }`}
       >
-        <ContactSupportOutlinedIcon style={{ fontSize: "2rem" }} />
+        <ContactSupportOutlinedIcon style={{ fontSize: "1.2rem" }} />
         <div className="-mt-2">Contact</div>
       </Link>
       <button onClick={handleLogout} className="text-center">
-        <LogoutOutlinedIcon style={{ fontSize: "2rem" }} />
+        <LogoutOutlinedIcon style={{ fontSize: "1.2rem" }} />
         <div className="-mt-2">Logout </div>
       </button>
     </div>
