@@ -34,7 +34,7 @@ const FilterRestaurant = ({
   };
 
   return (
-    <div className=" mt-6 sm:mt-8 lg:mt-12 flex flex-col sm:flex-row sm:justify-between md:items-center my-2 md:my-4 space-y-2 sm:space-y-0">
+    <div className="mx-4 mt-6 sm:mt-8 lg:mt-12 flex flex-col sm:flex-row sm:justify-between md:items-center my-2 md:my-4 space-y-2 sm:space-y-0">
       <div className="flex flex-row ">
         <input
           type="text"

@@ -127,12 +127,9 @@ const RestaurantList = () => {
   return (
     <>
       <HomeImage />
-      <main className="mx-4 md:mx-10 lg:mx-20 xl:mx-40 text-slate-700 pb-5 md:mt-28 mt-5">
-        <h1 className="text-2xl font-bold sm:text-3xl">
-          Any cravings on standby?
-        </h1>
+      <main className=" md:mx-10 lg:mx-20 xl:mx-40 text-slate-700 pb-5 md:mt-28 -mt-5">
         <Banner />
-        <div className="lg:block shadow-lg md:shadow-none rounded-2xl">
+        <div className="mx-4 lg:block shadow-lg md:shadow-none rounded-2xl">
           <h1 className="text-2xl font-bold lg:mt-8 mt-4">Top tastes around</h1>
           <div className="border-b-2 flex items-center max-w-full mx-auto mt-4 overflow-x-auto">
             <div className="flex flex-col sm:flex-row gap-2 md:gap-8 rounded-xl h-[20.1rem] overflow-x-auto max-w-screen-xl menu-scroll  px-1 ">
@@ -154,7 +151,9 @@ const RestaurantList = () => {
           </div>
         </div>
 
-        <h1 className="text-2xl font-bold mt-12 -mb-4">Local bites to you</h1>
+        <h1 className="text-2xl font-bold mt-12 -mb-4 mx-4">
+          Local bites to you
+        </h1>
 
         <FilterRestaurant
           filterOptions={filterOptions}
@@ -165,7 +164,7 @@ const RestaurantList = () => {
           listOfRes={listOfRes}
           setFilteredRes={setFilteredRes}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 xl:gap-10 sm:p-8 md:px-0 z-0 py-6 border-y-2">
+        <div className=" mx-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 xl:gap-10 sm:p-8 md:px-0 z-0 py-6 border-y-2">
           {filteredRes.map((rlist) => (
             <Link
               key={rlist.info.id}
