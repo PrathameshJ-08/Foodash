@@ -208,10 +208,10 @@ export const withBackToRes = (Cart) => {
   };
   return (props) => {
     return (
-      <div className="flex flex-col items-center shadow-md w-[366px] ">
+      <div className="flex flex-col items-center shadow-md w-[366px]">
         <div className="flex flex-col items-center shadow-md w-[366px]">
           <div
-            className="w-[366px] mx-auto rounded-t-md p-4 pb-2 bg-gray-100 flex items-center -mb-14 space-x-4 z-30 cursor-pointer hover:bg-slate-100"
+            className=" w-[366px] mx-auto rounded-t-md p-4 pb-2 bg-gray-100 flex items-center -mb-14 space-x-4 z-30 cursor-pointer hover:bg-slate-100"
             onClick={handleBackToRes}
           >
             <img src={img} className="w-28 rounded-md" alt="Product Image" />

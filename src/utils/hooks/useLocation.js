@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { GETALL_RESTAURANTS_API } from "../constants";
 import useFetchRestaurants from "./useFetchRestaurants";
 
 const useLocation = () => {

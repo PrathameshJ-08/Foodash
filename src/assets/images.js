@@ -61,3 +61,13 @@ export function NoImage() {
     </div>
   );
 }
+
+// --------home top image------------------
+const headerImg = new URL("./Images/HomeIMG.jpg", import.meta.url);
+export function HeaderImg({ mt = "-mt-8" }) {
+  return (
+    <div className="lg:hidden overflow-hidden">
+      <img src={headerImg} alt="headerImg" className={`${mt}`} />
+    </div>
+  );
+}

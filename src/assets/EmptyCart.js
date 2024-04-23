@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const EmptyCart = () => {
   return (
-    <div className="flex flex-col justify-center text-center items-center h-screen -mt-20">
+    <div className="flex flex-col justify-center text-center items-center h-screen -mt-14 lg:mt-0 px-4">
       <EmptyCartImage height="h-96" />
 
-      <p className="text-blue-500 font-extrabold text-2xl mb-2">
+      <p className="text-blue-500 font-extrabold text-2xl mb-2 ">
         Your cart is empty
       </p>
       <p className="mb-4">

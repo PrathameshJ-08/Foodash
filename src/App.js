@@ -12,19 +12,21 @@ import Header from "./components/Header.js";
 import Landing from "./components/LandingPage/Landing.js";
 import RestaurantList from "./components/Restaurant/RestaurantList.js";
 import Contact from "./components/Contact.js";
+import CartLayout from "./components/Restaurant/CartLayout.js";
 import Footer from "./components/Footer.js";
 
-import ResMenuShimmer from "./assets/Shimmer/ResMenuShimmer.js";
-import appStore from "./utils/appStore.js";
-import CartLayout from "./components/Restaurant/CartLayout.js";
-import EmptyCart from "./assets/EmptyCart.js";
 import useOnlineStatus from "./utils/hooks/useOnlineStatus.js";
-import Offline from "./assets/Offline.js";
-
 import { UserProvider } from "./utils/userContext.js";
-import { LoadingImg } from "./assets/images.js";
-import "./index.css";
 import PrivateRoute from "./utils/PrivateRoute.js";
+import appStore from "./utils/appStore.js";
+
+import ResMenuShimmer from "./assets/Shimmer/ResMenuShimmer.js";
+import { LoadingImg } from "./assets/images.js";
+import EmptyCart from "./assets/EmptyCart.js";
+import Offline from "./assets/Offline.js";
+import Error from "./assets/Error.js";
+
+import "./index.css";
 
 const RestaurantMenu = lazy(() =>
   import("./components/Restaurant/Menu/RestaurantMenu.js")
@@ -36,7 +38,7 @@ const AppLayout = () => {
   const isLandingPage = currentPath === "/";
   const isContactPage = currentPath === "/contact";
 
-  const renderHeader = !isLandingPage && <Header />;
+  const renderHeader = !(isLandingPage || isContactPage) && <Header />;
   const renderFooter = !(isLandingPage || isContactPage) && <Footer />;
   const [loading, setLoading] = useState(true);
 
@@ -90,6 +92,7 @@ const AppLayout = () => {
                   </Suspense>
                 }
               />
+              <Route path="*" element={<Error />} />
             </Routes>
             {renderFooter}
           </div>

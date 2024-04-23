@@ -5,7 +5,7 @@ const Shimmer = () => {
   return (
     <div className="mx-4 md:mx-10 lg:mx-20 xl:mx-40 z-10">
       {/* Header Shimmer */}
-      <div className="bg-gradient-to-r from-slate-800 via-blue-900 to-slate-800 shimmer mb-4 h-44 md:mt-28 -mt-6 relative rounded-2xl">
+      <div className="bg-gradient-to-r from-slate-800 via-blue-900 to-slate-800 shimmer mb-4 h-44 md:mt-28 mt-6  relative rounded-2xl">
         <div className=" grayscale absolute inset-0 flex items-center justify-center ">
           <LoadingImg />
         </div>

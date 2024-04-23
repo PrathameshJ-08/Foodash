@@ -132,7 +132,7 @@ const MenuList = () => {
   return (
     <>
       <div className="flex flex-col">
-        <div className="flex sm:flex-row flex-col items-center text-center sm:text-start sm:items-stretch bg-gradient-to-tr from-slate-950 via-cyan-800 to-teal-500 xl:mb-0 sm:mb-[-1.5rem] p-5 xl:p-10 py-16 -mt-10 md:mt-0 lg:h-[322px]">
+        <div className="flex sm:flex-row flex-col items-center text-center sm:text-start sm:items-stretch bg-gradient-to-tr from-slate-950 via-cyan-800 to-teal-500 xl:mb-0 sm:mb-[-1.5rem] p-5 xl:p-10 py-16 -mt-10 md:mt-24 lg:h-[322px]">
           <img
             className="rounded-2xl xl:mb-0  xl:flex-shrink-0 w-96 sm:self-center md:self-start"
             src={img}
@@ -171,67 +171,68 @@ const MenuList = () => {
         </div>
 
         {hasItem() && (
-          <span className="z-40 fixed text-white font-extrabold text-xs bg-amber-600 rounded-full w-4 text-center right-14 bottom-10">
+          <span className="z-40 fixed text-white font-extrabold text-xs bg-amber-600 rounded-full w-4 text-center lg:right-14 lg:bottom-10 right-14 bottom-[6.5rem]">
             {totalQuantity}
           </span>
         )}
 
         <button
-          className={`z-30 rounded-full fixed p-2 text-white bg-teal-500 bottom-5 right-6 text-2xl 
+          className={`z-30 rounded-full fixed p-2 text-white bg-teal-500 lg:bottom-5 lg:right-6 bottom-20 right-6 text-2xl 
         }`}
           onClick={handleCartToggle}
         >
           {showCart === false ? <PiCookingPotBold /> : <RxCross2 />}
         </button>
-        {showCart && (
-          <>
-            <div className="fixed right-5 bottom-5 shadow-lg z-20">
-              <Cart from={"menu"} />
-            </div>
-          </>
-        )}
-        <div className="mt-8 xl:mt-8 sm:mt-14 ">
-          <div className="relative -mt-[55px] mb-5   text-center">
-            <input
-              type="text"
-              placeholder="Search Menu Items..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className=" px-4 py-2 border-2 border-blue-950 rounded-2xl bg-teal-100 focus:outline-none focus:border-teal-500"
-            />
-            <button className="absolute  text-xl top-0 mt-1 -ml-10 text-teal-500">
-              <i className="fas fa-search"></i>
-            </button>
-          </div>
-          <div>
-            <Offers offers={offer} />
-          </div>
-          {filteredCategories.map((category, index) => (
-            <MenuCategory
-              key={category.card.card.title}
-              data={category.card.card}
-              showItems={index === openCategory}
-              setShowIndex={() => toggleCategory(index)}
-              rinfo={rinfo}
-            />
-          ))}
-
-          {filteredNestedCategories.map((category2, index) => (
-            <NestedCategory
-              key={category2.card.card.title}
-              data2={category2.card.card}
-              rinfo={rinfo}
-            />
-          ))}
-        </div>
         <button
-          className={`z-40 fixed ${
+          className={`hidden lg:block z-40 fixed ${
             showCart ? "bottom-5 right-20" : "bottom-20 right-[26px]"
           } bg-amber-500 hover:bg-amber-700 text-white font-bold text-2xl p-2 rounded-full`}
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <FaArrowUp />
         </button>
+      </div>
+
+      {showCart && (
+        <>
+          <div className="fixed right-5 bottom-20 md:bottom-5 shadow-lg z-20">
+            <Cart from={"menu"} />
+          </div>
+        </>
+      )}
+      <div className="mt-8 xl:mt-8 sm:mt-14 ">
+        <div className="relative -mt-[55px] mb-5   text-center">
+          <input
+            type="text"
+            placeholder="Search Menu Items..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className=" px-4 py-2 border-2 border-blue-950 rounded-2xl bg-teal-100 focus:outline-none focus:border-teal-500"
+          />
+          <button className="absolute  text-xl top-0 mt-1 -ml-10 text-teal-500">
+            <i className="fas fa-search"></i>
+          </button>
+        </div>
+        <div>
+          <Offers offers={offer} />
+        </div>
+        {filteredCategories.map((category, index) => (
+          <MenuCategory
+            key={category.card.card.title}
+            data={category.card.card}
+            showItems={index === openCategory}
+            setShowIndex={() => toggleCategory(index)}
+            rinfo={rinfo}
+          />
+        ))}
+
+        {filteredNestedCategories.map((category2, index) => (
+          <NestedCategory
+            key={category2.card.card.title}
+            data2={category2.card.card}
+            rinfo={rinfo}
+          />
+        ))}
       </div>
 
       <div className="flex justify-center text-xs lg:text-base">

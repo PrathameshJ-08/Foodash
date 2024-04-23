@@ -12,13 +12,18 @@ const useFetchRestaurants = () => {
   const location = useGeolocation();
 
   useEffect(() => {
-    fetchData(location.coordinates.lat, location.coordinates.long);
-  }, [location.coordinates.lat, location.coordinates.long]);
+    if (
+      location.coordinates &&
+      location.coordinates.lat &&
+      location.coordinates.long
+    ) {
+      fetchData(location.coordinates.lat, location.coordinates.long);
+    }
+  }, [location.coordinates]);
 
   const fetchData = async (lat, long) => {
     try {
       setIsLoading(true);
-      // const proxyUrl = "http://localhost:3001/swiggy-api";
       const proxyUrl = "https://foodash-server.onrender.com/swiggy-api";
       const data = await fetch(`${proxyUrl}?lat=${lat}&lng=${long}`);
 

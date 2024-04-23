@@ -46,14 +46,24 @@ const useGeolocation = () => {
     });
   };
 
+  const requestLocationPermission = () => {
+    navigator.geolocation.getCurrentPosition(onSuccess, (error) => {
+      if (error.code === error.PERMISSION_DENIED) {
+        alert("Location permission is required. Please enable it.");
+      }
+      onError(error);
+    });
+  };
+
   useEffect(() => {
     if (!("geolocation" in navigator)) {
       onError({
         code: 0,
         message: "Geolocation not supported",
       });
+    } else {
+      requestLocationPermission();
     }
-    navigator.geolocation.getCurrentPosition(onSuccess, onError);
   }, []);
 
   return location;
