@@ -34,12 +34,7 @@ const Contact = () => {
   const { name, avatar_url } = userInfo;
 
   return (
-    <div className="overflow-y-auto text-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-slate-600 to-gray-900 h-full">
-      <Link to="/rlist">
-        <button className="bg-gradient-to-r from-teal-500 to-lime-500 hover:from-teal-400 hover:to-lime-400 text-white font-bold py-3 px-4 rounded-full transition duration-300 ease-in-out xl:mt-28  absolute z-50 -ml-7 mt-5">
-          <HomeIcon />
-        </button>
-      </Link>
+    <div className="overflow-y-auto text-center bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-900 via-slate-600 to-gray-900 h-full pb-16 pt-8">
       <div className="flex justify-center items-center min-h-screen px-8  md:p-16 md:mt-0 -mt-4 ">
         <div className="md:h-96 md:p-6 w-full md:w-3/4 relative rounded-3xl xl:-mt-32 overflow-clip">
           <div className="absolute inset-0 bg-gradient-to-r from-teal-200 to-lime-200 opacity-80 filter blur-md shadow-lg rounded-2xl"></div>

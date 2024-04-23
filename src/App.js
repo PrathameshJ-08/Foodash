@@ -38,7 +38,7 @@ const AppLayout = () => {
   const isLandingPage = currentPath === "/";
   const isContactPage = currentPath === "/contact";
 
-  const renderHeader = !(isLandingPage || isContactPage) && <Header />;
+  const renderHeader = !isLandingPage && <Header />;
   const renderFooter = !(isLandingPage || isContactPage) && <Footer />;
   const [loading, setLoading] = useState(true);
 
